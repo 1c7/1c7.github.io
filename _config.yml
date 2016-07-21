@@ -9,9 +9,7 @@
 title: Cheng Zheng's Blog
 email: chengzheng.applyl@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, My name is Cheng Zheng, I am a Web developer who love Ruby on Rails. :heart:
-  Living in GuangZhou, China. currently working on a side project with couple wonderful people.
-  the project call FrontSeat, not available yet, but soon ;)
+  Hi, My name is Cheng Zheng, I am Ruby on Rails developer
   
 url: "http://1c7.me" # the base hostname & protocol for your site
 # twitter_username: jekyllrb
