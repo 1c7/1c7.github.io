@@ -1,3 +1,10 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'Lato';
+  src: url("/fonts/Lato/Lato-Regular.ttf") format("ttf"); }
+@font-face {
+  font-family: 'Consolas';
+  src: url("/fonts/Consolas.ttf") format("ttf"); }
 /**
  * Reset some basic elements
  */
@@ -11,7 +18,8 @@ dl, dd, ol, ul, figure {
  * Basic styling
  */
 body {
-  font: 400 16px/1.5 "Helvetica Neue", Helvetica, Arial, sans-serif;
+  /* font: $base-font-weight 16px/1.5 $base-font-family; */
+  font-family: 'Lato', "Microsoft YaHei", "微软雅黑", sans-serif !important;
   color: #111;
   background-color: #fdfdfd;
   -webkit-text-size-adjust: 100%;
@@ -92,6 +100,7 @@ blockquote {
  */
 pre,
 code {
+  font-family: 'Consolas' !important;
   font-size: 15px;
   border: 1px solid #e8e8e8;
   border-radius: 3px;
@@ -290,7 +299,8 @@ pre {
   margin-bottom: 30px; }
 
 .post-title {
-  font-size: 42px;
+  margin-top: 40px;
+  font-size: 34px;
   letter-spacing: -1px;
   line-height: 1; }
   @media screen and (max-width: 800px) {
