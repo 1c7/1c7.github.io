@@ -1,58 +1,98 @@
 ---
 layout: post
-title:  "Ajax image upload view paperclip"
+title:  "[Ruby on Rails 4 + Paperclip gem]: Ajax image upload"
 date:   2016-07-17 19:33:43 +0800
-categories: rails paperclip
 ---
+Estimate reading time: 6 minute  
 
 
-I was trying to create a API for Ajax Image Upload,  
-Search about it on Google,   
-Article about Ajax image upload is either from 2011~2013 or not working or seem over complex.
+## 0. why
+I was trying to create __Ajax Image Upload API__ for My Rails application,  
+So I search on Google,   
+These article:
+
+  1. 80% from 2011~2013
+  2. not working
+  3. over complex.  
+
 I poke around little bit, and come with a simple solution  
+Here is my solution
 
 
-Here is my soluation: Rails + Paperclip + Ajax  upload image file
 
-note: image in this example are store in paperclip default location.  now Amazon AWS.  
 
-let's create a example rails project first.  
+<br/>
 
-[Create rails project]
-```
-rails new ajaximg --skip-bundle
-```
 
-[Install Paperclip gem]
-do as officer guid says:https://github.com/thoughtbot/paperclip
+## 0.5 Preview final result:  
+![page](/images/post1/5.png)
+![page](/images/post1/6.png)
+![page](/images/post1/7.png)
+![page](/images/post1/8.png)
+![page](/images/post1/9.png)
+![page](/images/post1/10.png)
+![page](/images/post1/11.png)
 
-add following line to gemfile
+
+
+
+
+<br/>
+<br/>
+
+## Well, let's do this step by step  
+
+
+<br/>
+
+
+## 1. Create a Rails project  
+`ruby 
+rails new img --skip-bundle
 `
+
+<br/>
+
+## 2. Install Paperclip gem: 
+[following instruction come from offcial guide](https://github.com/thoughtbot/paperclip)
+
+add following line to gemfile    
+
+`ruby
 gem "paperclip", "~> 5.0.0" 
 `
-and then `bundle install`
 
-or `gem install paperclip`
+and then   
+`bundle install`
 
-[]
-
-
-
+or   
+`gem install paperclip`
 
 
+<br/>
+
+## 3. Create model for Image and necessary migration
+
+run   
+
+`ruby
 rails g model Image
+`
 
+copy & paste following code into `app/models/image.rb`  
+
+```ruby
 class Image < ActiveRecord::Base
-  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"
+  has_attached_file :image, styles: { medium: "300x300>", thumb: "100x100>" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 end
+```
 
+`rails g migration addAttachmentToImage`
 
-rails g migration addAttachmentToImage
+inside `db/migrate/20160721100726_add_attachment_to_image.rb` file
 
-go to
-db/migrate/20160721100726_add_attachment_to_image.rb
-
+```ruby
 class AddAttachmentToImage < ActiveRecord::Migration
   def up
     add_attachment :images, :image
@@ -62,47 +102,46 @@ class AddAttachmentToImage < ActiveRecord::Migration
     remove_attachment :images, :image
   end
 end
+```
 
+and finally  
 
-
+`
 bundle exec rake db:migrate
+`
+
+<br/>
 
 
+## 4. Routes
 
-routes
+config/routes.rb  
 
-	# for view
-  get '/image' => 'test#image'	
-
-  # for ajax
-  put 'api/image_upload' => 'api#image_upload', as: :api_image_upload
-
-
-
-
+```ruby
 Rails.application.routes.draw do
 
+  # for view
   get '/image' => 'test#image'
+
+  # for ajax
   put 'api/image_upload' => 'api#image_upload', as: :image_upload
 
 end
-
-
-
-
-
-
-
-rails g controller test image
-
-rails g controller api image_upload
-
-
-
-view
-	test/image.html.erb
-
 ```
+
+`rails g controller test image`
+
+`rails g controller api image_upload`
+
+
+
+<br/>
+
+## 5. View
+
+put following content into: `app/views/test/image.html.erb`
+
+```javascript
 <%= file_field_tag :image %>
 
 
@@ -110,7 +149,7 @@ view
 
 $('#image').change(function(){
 
-	var formData = new FormData(),
+  var formData = new FormData(),
     $input = $(this);
     
 	formData.append('image[image]', $input[0].files[0]);
@@ -129,10 +168,15 @@ $('#image').change(function(){
 ```
 
 
-controller
-	api#image_upload
+<br/>
 
-`
+
+## 6. Controller
+
+in file: `app/controller/api_controller.rb`
+
+
+```ruby
 class ApiController < ApplicationController
 	
   def image_upload
@@ -147,42 +191,73 @@ class ApiController < ApplicationController
   end
 
 
-
   private
   def img_params
       params.require(:image).permit(:image)
   end
 
 end
+```
+
+
+<br/>
+
+
+## 7. Experiment Time!
+
+
+
+`ruby
+rails s -b 0.0.0.0 -p 5000      
 `
 
-let's try if this work
-
-rails s -b 0.0.0.0 -p 5000
-
--b mean you can visit this outside vmware..
--p mean port 5000
-s mean server
-
-![image]()
-![image]()
-![image]()
+s mean server      
+-b mean you can visit this outside vmware  
+-p mean port 5000  
 
 
+<br/>
+
+
+### 7.1 First 
+`http://192.168.1.139:5000/image`  
+your address is different from mine, don't forget change it   
+![page](/images/post1/1.png)
+
+### 7.2 Let's Choose a file
+
+![page](/images/post1/2.png)
+
+
+### 7.3 It work!
+
+![page](/images/post1/3.png)
+
+
+### 7.4 Image work!
+
+![page](/images/post1/4.png)
 
 
 
 
-let's preview file
+
+<br/>
+<br/>
+
+## Done! over.
+but we can push little further
+
+<br/>
+
+### Let's preview file
 
 
 
 
-
+```javascript
 <%= file_field_tag :image %>
-<img id='preview' src="#">
-
-
+<img id='preview' src="#">   <!-- new code here-->
 
 
 <script type="text/javascript">
@@ -201,36 +276,28 @@ $('#image').change(function(){
 	  contentType: false,
 	  processData: false,
 	  type: 'PUT'
-	}).done(function(result){
+	}).done(function(result){  <!-- new code here-->
 
-		console.log(result.image_url);
-		$('#preview').attr('src', result.image_url);
+		console.log(result.image_url);    <!-- new code here-->
+		$('#preview').attr('src', result.image_url); <!-- new code here-->
 
-	});
+	}); <!-- new code here-->
+
 })
 
 </script>
+```
 
 
+<br/>
 
 
+### if you need validate:
 
 
-if you need validate:
+Model  
 
-
-    image = Image.new(img_params)
-    image.user_id = current_user.id
-    if image.save
-      render :json => {:status => 'success',:image_url => image.image.url}
-    else
-      render :json => {:status => 'fail',   :info => image.errors.full_messages}
-    end
-
-
-and you may want change model as well
-
-
+```ruby 
 class Image < ActiveRecord::Base
 
   has_attached_file :image, styles: { medium: "160x160>", thumb: "60x60>" }
@@ -239,16 +306,109 @@ class Image < ActiveRecord::Base
   validates_attachment :image, :presence => true,
     :size => { :in => 0..2048.kilobytes }
 end
+```
+
+Controller  
+
+```ruby
+class ApiController < ApplicationController
+  
+  def image_upload
+
+    image = Image.new(img_params)
+
+    if image.save
+      render :json => {:status => 'success',:image_url => image.image.url}
+    else
+      render :json => {:status => 'fail',   :info => image.errors.full_messages}
+    end
+
+  end
 
 
+  private
+  def img_params
+      params.require(:image).permit(:image)
+  end
+
+end
+```
+
+<br/>
+<br/>
+
+----  
+
+## Conclustion   
+
+### the most import part is     
+
+```javascript
+<%= file_field_tag :image %>
+<img id='preview' src="#">   <!-- new code here-->
 
 
+<script type="text/javascript">
+
+$('#image').change(function(){
+
+  var formData = new FormData(),
+    $input = $(this);
+    
+  formData.append('image[image]', $input[0].files[0]);
+
+  $.ajax({
+    url: '<%= image_upload_path %>',
+    data: formData,
+    cache: false,
+    contentType: false,
+    processData: false,
+    type: 'PUT'
+  }).done(function(result){  <!-- new code here-->
+
+    console.log(result.image_url);    <!-- new code here-->
+    $('#preview').attr('src', result.image_url); <!-- new code here-->
+
+  }); <!-- new code here-->
+
+})
+
+</script>
+```
+
+```ruby
+class ApiController < ApplicationController
+  
+  def image_upload
+
+    image = Image.new(img_params)
+
+    if image.save
+      render :json => {:status => 'success',:image_url => image.image.url}
+    else
+      render :json => {:status => 'fail',   :info => image.errors.full_messages}
+    end
+
+  end
 
 
+  private
+  def img_params
+      params.require(:image).permit(:image)
+  end
+
+end
+```
 
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
-( I haven't put Disqus in this blog yet, so sorry about you can't comment )
-( If this post really save your time, just send me a email: chengzheng.apply@gmail.com
-"hey man you solution work, awesome!" that...make me feel little better :D )
+#### I haven't use Disqus yet, Sorry about you can't comment
