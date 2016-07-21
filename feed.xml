@@ -6,23 +6,219 @@
 </description>
     <link>http://1c7.me/</link>
     <atom:link href="http://1c7.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Mon, 18 Jul 2016 12:25:11 +0800</pubDate>
-    <lastBuildDate>Mon, 18 Jul 2016 12:25:11 +0800</lastBuildDate>
+    <pubDate>Thu, 21 Jul 2016 19:52:33 +0800</pubDate>
+    <lastBuildDate>Thu, 21 Jul 2016 19:52:33 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
-        <title>First post</title>
-        <description>&lt;p&gt;nothing&lt;/p&gt;
+        <title>Ajax image upload view paperclip</title>
+        <description>&lt;p&gt;I was trying to create a API for Ajax Image Upload,&lt;br /&gt;
+Search about it on Google, &lt;br /&gt;
+Article about Ajax image upload is either from 2011~2013 or not working or seem over complex.
+I poke around little bit, and come with a simple solution&lt;/p&gt;
 
+&lt;p&gt;Here is my soluation: Rails + Paperclip + Ajax  upload image file&lt;/p&gt;
+
+&lt;p&gt;note: image in this example are store in paperclip default location.  now Amazon AWS.&lt;/p&gt;
+
+&lt;p&gt;let’s create a example rails project first.&lt;/p&gt;
+
+&lt;p&gt;[Create rails project]
+&lt;code class=&quot;highlighter-rouge&quot;&gt;
+rails new ajaximg --skip-bundle
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;[Install Paperclip gem]
+do as officer guid says:https://github.com/thoughtbot/paperclip&lt;/p&gt;
+
+&lt;p&gt;add following line to gemfile
+`
+gem “paperclip”, “~&amp;gt; 5.0.0” 
+`
+and then &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;or &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install paperclip&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;[]&lt;/p&gt;
+
+&lt;p&gt;rails g model Image&lt;/p&gt;
+
+&lt;p&gt;class Image &amp;lt; ActiveRecord::Base
+  has_attached_file :image, styles: { medium: “300x300&amp;gt;”, thumb: “100x100&amp;gt;” }, default_url: “/images/:style/missing.png”
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+end&lt;/p&gt;
+
+&lt;p&gt;rails g migration addAttachmentToImage&lt;/p&gt;
+
+&lt;p&gt;go to
+db/migrate/20160721100726_add_attachment_to_image.rb&lt;/p&gt;
+
+&lt;p&gt;class AddAttachmentToImage &amp;lt; ActiveRecord::Migration
+  def up
+    add_attachment :images, :image
+  end&lt;/p&gt;
+
+&lt;p&gt;def down
+    remove_attachment :images, :image
+  end
+end&lt;/p&gt;
+
+&lt;p&gt;bundle exec rake db:migrate&lt;/p&gt;
+
+&lt;p&gt;routes&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;# for view   get &#39;/image&#39; =&amp;gt; &#39;test#image&#39;	
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;# for ajax
+  put ‘api/image_upload’ =&amp;gt; ‘api#image_upload’, as: :api_image_upload&lt;/p&gt;
+
+&lt;p&gt;Rails.application.routes.draw do&lt;/p&gt;
+
+&lt;p&gt;get ‘/image’ =&amp;gt; ‘test#image’
+  put ‘api/image_upload’ =&amp;gt; ‘api#image_upload’, as: :image_upload&lt;/p&gt;
+
+&lt;p&gt;end&lt;/p&gt;
+
+&lt;p&gt;rails g controller test image&lt;/p&gt;
+
+&lt;p&gt;rails g controller api image_upload&lt;/p&gt;
+
+&lt;p&gt;view
+	test/image.html.erb&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&amp;lt;%= file_field_tag :image %&amp;gt;
+
+
+&amp;lt;script type=&quot;text/javascript&quot;&amp;gt;
+
+$(&#39;#image&#39;).change(function(){
+
+	var formData = new FormData(),
+    $input = $(this);
+    
+	formData.append(&#39;image[image]&#39;, $input[0].files[0]);
+
+	$.ajax({
+	  url: &#39;&amp;lt;%= image_upload_path %&amp;gt;&#39;,
+	  data: formData,
+	  cache: false,
+	  contentType: false,
+	  processData: false,
+	  type: &#39;PUT&#39;
+	});
+})
+
+&amp;lt;/script&amp;gt;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;controller
+	api#image_upload&lt;/p&gt;
+
+&lt;p&gt;`
+class ApiController &amp;lt; ApplicationController&lt;/p&gt;
+
+&lt;p&gt;def image_upload
+    @image = Image.create(img_params)&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;if @image
+  render :json =&amp;gt; {:status =&amp;gt; &#39;success&#39;,:image_url =&amp;gt; @image.image.url}
+else
+  render :json =&amp;gt; {:status =&amp;gt; &#39;fail&#39;}
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;end&lt;/p&gt;
+
+&lt;p&gt;private
+  def img_params
+      params.require(:image).permit(:image)
+  end&lt;/p&gt;
+
+&lt;p&gt;end
+`&lt;/p&gt;
+
+&lt;p&gt;let’s try if this work&lt;/p&gt;
+
+&lt;p&gt;rails s -b 0.0.0.0 -p 5000&lt;/p&gt;
+
+&lt;p&gt;-b mean you can visit this outside vmware..
+-p mean port 5000
+s mean server&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;&quot; alt=&quot;image&quot; /&gt;
+&lt;img src=&quot;&quot; alt=&quot;image&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;let’s preview file&lt;/p&gt;
+
+&lt;p&gt;&amp;lt;%= file_field_tag :image %&amp;gt;
+&lt;img id=&quot;preview&quot; src=&quot;#&quot; /&gt;&lt;/p&gt;
+
+&lt;script type=&quot;text/javascript&quot;&gt;
+
+$(&#39;#image&#39;).change(function(){
+
+	var formData = new FormData(),
+    $input = $(this);
+    
+	formData.append(&#39;image[image]&#39;, $input[0].files[0]);
+
+	$.ajax({
+	  url: &#39;&lt;%= image_upload_path %&gt;&#39;,
+	  data: formData,
+	  cache: false,
+	  contentType: false,
+	  processData: false,
+	  type: &#39;PUT&#39;
+	}).done(function(result){
+
+		console.log(result.image_url);
+		$(&#39;#preview&#39;).attr(&#39;src&#39;, result.image_url);
+
+	});
+})
+
+&lt;/script&gt;
+
+&lt;p&gt;if you need validate:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;image = Image.new(img_params)
+image.user_id = current_user.id
+if image.save
+  render :json =&amp;gt; {:status =&amp;gt; &#39;success&#39;,:image_url =&amp;gt; image.image.url}
+else
+  render :json =&amp;gt; {:status =&amp;gt; &#39;fail&#39;,   :info =&amp;gt; image.errors.full_messages}
+end
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;and you may want change model as well&lt;/p&gt;
+
+&lt;p&gt;class Image &amp;lt; ActiveRecord::Base&lt;/p&gt;
+
+&lt;p&gt;has_attached_file :image, styles: { medium: “160x160&amp;gt;”, thumb: “60x60&amp;gt;” }
+  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/&lt;/p&gt;
+
+&lt;p&gt;validates_attachment :image, :presence =&amp;gt; true,
+    :size =&amp;gt; { :in =&amp;gt; 0..2048.kilobytes }
+end&lt;/p&gt;
+
+&lt;p&gt;( I haven’t put Disqus in this blog yet, so sorry about you can’t comment )
+( If this post really save your time, just send me a email: chengzheng.apply@gmail.com
+“hey man you solution work, awesome!” that…make me feel little better :D )&lt;/p&gt;
 </description>
         <pubDate>Sun, 17 Jul 2016 19:33:43 +0800</pubDate>
-        <link>http://1c7.me/jekyll/update/2016/07/17/hoho.html</link>
-        <guid isPermaLink="true">http://1c7.me/jekyll/update/2016/07/17/hoho.html</guid>
+        <link>http://1c7.me/rails/paperclip/2016/07/17/ajax-image-upload-with-rails-paperclip.html</link>
+        <guid isPermaLink="true">http://1c7.me/rails/paperclip/2016/07/17/ajax-image-upload-with-rails-paperclip.html</guid>
         
         
-        <category>jekyll</category>
+        <category>rails</category>
         
-        <category>update</category>
+        <category>paperclip</category>
         
       </item>
     
