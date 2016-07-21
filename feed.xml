@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Cheng Zheng&#39;s Blog</title>
-    <description>Hi, My name is Cheng Zheng, I am a Web developer who love Ruby on Rails. :heart: Living in GuangZhou, China. currently working on a side project with couple wonderful people. the project call FrontSeat, not available yet, but soon ;)
+    <description>Hi, My name is Cheng Zheng, I am Ruby on Rails developer
 </description>
     <link>http://1c7.me/</link>
     <atom:link href="http://1c7.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Thu, 21 Jul 2016 21:24:33 +0800</pubDate>
-    <lastBuildDate>Thu, 21 Jul 2016 21:24:33 +0800</lastBuildDate>
+    <pubDate>Thu, 21 Jul 2016 22:07:11 +0800</pubDate>
+    <lastBuildDate>Thu, 21 Jul 2016 22:07:11 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
