@@ -7,12 +7,12 @@
 
 # Site settings
 title: Cheng Zheng's Blog
-email: chengzheng.applyl@gmail.com
+email: chengzheng.apply@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Hi, My name is Cheng Zheng, I am Ruby on Rails developer
+  Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
   
 url: "http://1c7.me" # the base hostname & protocol for your site
-# twitter_username: jekyllrb
+twitter_username: 1c7_code
 github_username:  1c7
 
 # Build settings

@@ -1,0 +1,9 @@
+---
+layout: post
+title:  "[Ruby on Rails 4 + Paperclip gem]: Ajax image upload"
+date:   2016-07-17 19:33:43 +0800
+---
+
+
+
+
