@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Cheng Zheng&#39;s Blog</title>
-  <meta name="description" content="Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
-">
+  <title>What gem you should know as a Rails newbie</title>
+  <meta name="description" content="Estimate reading time: 2 minute, 21 second, 220 milliseconds">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://1c7.me/">
+  <link rel="canonical" href="http://1c7.me/2016/07/22/what-gem-you-should-know-as-a-Rails-newbie.html">
   <link rel="alternate" type="application/rss+xml" title="Cheng Zheng's Blog" href="http://1c7.me/feed.xml">
   <link rel="icon" type="image/png" href="FAVICON.png">
 </head>
@@ -60,42 +59,111 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">What gem you should know as a Rails newbie</h1>
+    <p class="post-meta"><time datetime="2016-07-22T19:33:43+08:00" itemprop="datePublished">Jul 22, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Jul 31, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <h5 id="estimate-reading-time-2-minute-21-second-220-milliseconds">Estimate reading time: 2 minute, 21 second, 220 milliseconds</h5>
 
-        <h2>
-          <a class="post-link" href="/2016/07/31/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html">How I feel after switch from PHP to Ruby on Rails (6 month now)</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 22, 2016</span>
+<p><br /></p>
 
-        <h2>
-          <a class="post-link" href="/2016/07/22/what-gem-you-should-know-as-a-Rails-newbie.html">What gem you should know as a Rails newbie</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 17, 2016</span>
+<h3 id="target-reader-people-who-just-finish-rails-101-tutorial">Target reader: People who just finish Rails 101 tutorial.</h3>
+<p>by 101, I mean general introduction tutorial, probably the offcial Rails guide, or video on Youtube.<br />
+maybe some Blog.</p>
 
-        <h2>
-          <a class="post-link" href="/2016/07/17/ajax-image-upload-with-rails-paperclip.html">[Ruby on Rails 4 + Paperclip gem]: Ajax image upload</a>
-        </h2>
-      </li>
-    
-  </ul>
+<p><br />
+<br /></p>
 
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
+<p>Well, now you want learn more,   <br />
+You may be thinking, what gem are people using?   <br />
+here’s a list of gem I think you should know.</p>
 
-</div>
+<p><br /></p>
 
+<h3 id="database">Database</h3>
+<p>SQLite is for Small website,<br />
+if you want grow bigger than that,<br />
+you need MySQL or PostgreSQL or some other DB (maybe MongoDB or RethinkDB?)</p>
+
+<p>for MySQL you should use gem <a href="https://rubygems.org/gems/mysql2">mysql2</a>  <br />
+for PostgreSQL you should use gem <a href="https://rubygems.org/gems/pg/">pg</a></p>
+
+<p><br /></p>
+
+<h3 id="deploy">Deploy</h3>
+<p>Mina (Recommend) <br />
+Capistrano 3</p>
+
+<p>it’s 2016, if possible, don’t use FTP software like FileZilla to deploy.<br />
+you will get tried very soon.<br />
+try to automate everything, that’s the beauty of computer right?</p>
+
+<p><br /></p>
+
+<h3 id="server">Server</h3>
+<p>Unicorn<br />
+Thin<br />
+Passanger<br />
+Puma (I am using this, and it’s Rails 5 default Server)</p>
+
+<p><br /></p>
+
+<h3 id="upload-imagefile">Upload image/file</h3>
+<p>CarrierWare<br />
+PaperClip (I am using this)<br />
+Refile</p>
+
+<p><br /></p>
+
+<h3 id="login">Login</h3>
+
+<p>[Devise] <br />
+	Speed up making your own login, like email &amp; password, username &amp; password</p>
+
+<p>[Omniauth]  <br />
+	Third party login, like Facebook Twitter Github Google Linkedin</p>
+
+<p><br /></p>
+
+<h3 id="test">Test</h3>
+<p>Rspec</p>
+
+<!-- <br/>
+
+### Pagination
+
+Kaminari 
+will_paginate  -->
+
+
+  </div>
+
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//1c7-me.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    
       </div>
     </div>
 
