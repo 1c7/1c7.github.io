@@ -3,7 +3,7 @@ layout: post
 title:  "How I feel after switch from PHP to Ruby on Rails (6 month now)"
 date:   2016-07-31 10:41:01 +0800
 ---
-##### Estimate reading time: 7 minute  
+##### Estimate reading time: 6 minute  
 
 <br/>
 
@@ -14,7 +14,6 @@ not really happy period, just feel... ok.
 
 and then I switch to Ruby on Rails, (2016,January~now) feel much happier now.     
 let me tell you why  
-
 
 <br/>
 
@@ -122,7 +121,7 @@ I have try both, Mina is better for me
 <br/>
 <br/>
 
-### Conclusion
+### 4. Conclusion
 here just my feeling. for me, Rails make me a lot happier,  
 the syntax of Ruby, the simplicity of Rails Active Record    
 
@@ -136,7 +135,7 @@ but, for me, Rails make me much more productive and make me a much happier web d
 <br/>
 <br/>
 
-### btw (by the way)
+### 5. btw (by the way)
 My experience is not just Rails and PHP  
 
 I have try a lot of other language and framework:  
@@ -164,7 +163,7 @@ If you still don't want switch to Rails, maybe you should check that out.
 <br/>
 <br/>
 
-### My current status (2016, August)
+### 6. My current status (2016, August)
 
 1. Just finish two side project (All by my own, idea, design, code):  
 [OneReco](https://www.onereco.com/) and [Sumup](http://www.youtube-sumup.com/)     
@@ -186,7 +185,6 @@ Looking for Ruby on Rails REMOTE position (I am living in China right now)
 <br/>
 <br/>
 
-#### one last thing  
-
-(I am not a native english speaker, so if I got grammar error,   
-please point out, help me improve. Thanks)
+#### One last thing (Imaging Steve Jobs voice)  
+I am not a native english speaker, so if I got grammar error,   
+please point out, help me improve. Thanks

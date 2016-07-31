@@ -3,7 +3,9 @@ layout: post
 title:  "[Ruby on Rails 4 + Paperclip gem]: Ajax image upload"
 date:   2016-07-17 19:33:43 +0800
 ---
-Estimate reading time: 6 minute  
+##### Estimate reading time: 6 minute  
+
+<br/>
 
 
 ## 0. why
@@ -339,11 +341,16 @@ end
 
 ----  
 
-## Conclustion   
+<br/>
 
-### the most import part is     
+## Conclusion   
+
+### Most important part is     
+
+view:  
 
 ```javascript
+
 <%= file_field_tag :image %>
 <img id='preview' src="#">   <!-- new code here-->
 
@@ -376,6 +383,8 @@ $('#image').change(function(){
 </script>
 ```
 
+controller:  
+
 ```ruby
 class ApiController < ApplicationController
   
@@ -404,11 +413,3 @@ end
 <br/>
 <br/>
 <br/>
-<br/>
-<br/>
-<br/>
-<br/>
-<br/>
-
-
-#### I haven't use Disqus yet, Sorry about you can't comment
