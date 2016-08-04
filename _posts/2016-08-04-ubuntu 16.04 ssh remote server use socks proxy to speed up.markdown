@@ -1,0 +1,62 @@
+---
+layout: post
+title:  "ssh 使用 shadowsocks 加速"
+date:   2016-08-04 16:41:01 +0800
+---
+
+
+### 问题
+
+国内 ssh 国外的 vps 服务器,　要么死慢死慢(300ms+),　要么完全连不上.
+
+<br/>
+  
+### 解决方法 (环境: Ubuntu 16.04):   
+
+首先本地的 shadowssock 要跑起来  
+我用的是 shadowssock-qt 就是那个绿色圆圈图标的  
+安装 shadowssock-qt:  
+
+```
+sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+```
+  
+
+<br/>
+
+第 1 步
+
+```
+touch ~/.ssh/config  
+```
+
+新建这个配置文件  
+
+<br/>
+
+第 2 步
+
+```
+vim ~/.ssh/config  
+```
+
+vim 命令就是编辑这个文件  
+
+
+
+按 `i` 进入编辑模式, 在这个文件里面写:  
+
+```
+ProxyCommand nc -x localhost:1080 %h %p  
+```
+按 ESC 回到命令模式  
+然后 `:wq`　保存  
+
+<br/>
+<br/>
+
+现在就快多了  
+不需要的时候在前面加上 # 号注释掉, 需要的时候再打开
+

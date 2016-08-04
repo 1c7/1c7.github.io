@@ -17,3 +17,4 @@ github_username:  1c7
 
 # Build settings
 markdown: kramdown
+encoding: utf-8
