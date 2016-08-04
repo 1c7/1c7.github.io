@@ -6,9 +6,170 @@
 </description>
     <link>http://1c7.me/</link>
     <atom:link href="http://1c7.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jul 2016 14:20:56 +0800</pubDate>
-    <lastBuildDate>Sun, 31 Jul 2016 14:20:56 +0800</lastBuildDate>
+    <pubDate>Thu, 04 Aug 2016 20:09:44 +0800</pubDate>
+    <lastBuildDate>Thu, 04 Aug 2016 20:09:44 +0800</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>ssh 使用 shadowsocks 加速</title>
+        <description>&lt;h3 id=&quot;section&quot;&gt;问题&lt;/h3&gt;
+
+&lt;p&gt;国内 ssh 国外的 vps 服务器,　要么死慢死慢(300ms+),　要么完全连不上.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;ubuntu-1604&quot;&gt;解决方法 (环境: Ubuntu 16.04):&lt;/h3&gt;
+
+&lt;p&gt;首先本地的 shadowssock 要跑起来&lt;br /&gt;
+我用的是 shadowssock-qt 就是那个绿色圆圈图标的&lt;br /&gt;
+安装 shadowssock-qt:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;第 1 步&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;touch ~/.ssh/config  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;新建这个配置文件&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;第 2 步&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;vim ~/.ssh/config  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;vim 命令就是编辑这个文件&lt;/p&gt;
+
+&lt;p&gt;按 &lt;code class=&quot;highlighter-rouge&quot;&gt;i&lt;/code&gt; 进入编辑模式, 在这个文件里面写:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ProxyCommand nc -x localhost:1080 %h %p  
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;按 ESC 回到命令模式&lt;br /&gt;
+然后 &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;　保存&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;现在就快多了&lt;br /&gt;
+不需要的时候在前面加上 # 号注释掉, 需要的时候再打开&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Aug 2016 16:41:01 +0800</pubDate>
+        <link>http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html</link>
+        <guid isPermaLink="true">http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Jekyll 写中文报错 utf-8</title>
+        <description>&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;a@ubuntu:~/Desktop/1c7.github.io$ jekyll serve --host=0.0.0.0
+Configuration file: /home/a/Desktop/1c7.github.io/_config.yml
+            Source: /home/a/Desktop/1c7.github.io
+       Destination: /home/a/Desktop/1c7.github.io/_site
+ Incremental build: disabled. Enable with --incremental
+      Generating... 
+             Error: could not read file /home/a/Desktop/1c7.github.io/_posts/2016-08-03-ubuntu 16.04 ssh remote server use socks proxy to speed up.markdown: invalid byte sequence in UTF-8
+  Liquid Exception: invalid byte sequence in UTF-8 in /home/a/Desktop/1c7.github.io/_posts/2016-08-03-ubuntu 16.04 ssh remote server use socks proxy to speed up.markdown
+jekyll 3.1.6 | Error:  invalid byte sequence in UTF-8
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;解决方法:&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 里最后一行加上 &lt;code class=&quot;highlighter-rouge&quot;&gt;encoding: utf-8&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;然后 markdown 文件以 utf-8 格式另存, 覆盖掉原来的文件即可 (我用的gedit)&lt;/p&gt;
+
+&lt;p&gt;我的环境是 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll 3.1.6&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Ubuntu16.04&lt;/code&gt; 管用&lt;/p&gt;
+
+</description>
+        <pubDate>Thu, 04 Aug 2016 16:41:01 +0800</pubDate>
+        <link>http://1c7.me/2016/08/04/Jekyll-utf-8-error.html</link>
+        <guid isPermaLink="true">http://1c7.me/2016/08/04/Jekyll-utf-8-error.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>Soluation to Rails assest precompile cause server CPU usage too high</title>
+        <description>&lt;p&gt;I was using Mina to deploy Rails project to Digital Ocean VPS (1GB memory)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;in mina &lt;code class=&quot;highlighter-rouge&quot;&gt;confir/deploy.rb&lt;/code&gt; file&lt;br /&gt;
+there are one line:&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;invoke :&#39;rails:assets_precompile&#39;
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;it mean precompile assest file on server&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;this it take way too long&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;I, [2016-08-03T01:58:08.085687 #26033]  INFO -- : Writing /var/www/FS/tmp/build-147020368219820/public/assets/bootstrap.min-a624ed6e3c01894e8daa1456e852c26ce1ab4e8d52dcfd9ee4055395c9d39e5c.js
+I, [2016-08-03T01:58:08.086095 #26033]  INFO -- : Writing /var/www/FS/tmp/build-147020368219820/public/assets/bootstrap.min-a624ed6e3c01894e8daa1456e852c26ce1ab4e8d52dcfd9ee4055395c9d39e5c.js.gz
+-----&amp;gt; Cleaning up old releases (keeping 5)
+-----&amp;gt; Deploy finished
+-----&amp;gt; Building
+-----&amp;gt; Moving build to releases/12
+-----&amp;gt; Build finished
+-----&amp;gt; Launching
+-----&amp;gt; Updating the current symlink
+-----&amp;gt; Launching
+Command phased-restart sent success
+-----&amp;gt; Done. Deployed v12
+Connection to 107.170.237.232 closed.
+       Elapsed time: 215.61 seconds
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;And most importantly when I run &lt;code class=&quot;highlighter-rouge&quot;&gt;ps aux&lt;/code&gt; &lt;br /&gt;
+Node.js take 97~100% CPU &lt;br /&gt;
+WTF&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;soluation&quot;&gt;Soluation:&lt;/h3&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Upgrade you VPS memory (we choose this, upgrade from 1GB -&amp;gt; 2GB)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Precompile localy push to Github and then deploy ( tried, work fine )&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Create SWAP Space on Ubuntu ( tried, but not working on me )&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;I saw the third soluation from here: &lt;br /&gt;
+&lt;a href=&quot;http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ&quot;&gt;http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;if you got better soluation, please comment let me know, thanks&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 03 Aug 2016 16:39:00 +0800</pubDate>
+        <link>http://1c7.me/2016/08/03/Soluation-to-Assest-Precompile-cause-server-CPU-usage-too-high.html</link>
+        <guid isPermaLink="true">http://1c7.me/2016/08/03/Soluation-to-Assest-Precompile-cause-server-CPU-usage-too-high.html</guid>
+        
+        
+      </item>
     
       <item>
         <title>How I feel after switch from PHP to Ruby on Rails (6 month now)</title>

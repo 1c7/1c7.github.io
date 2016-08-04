@@ -6,12 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Cheng Zheng&#39;s Blog</title>
-  <meta name="description" content="Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
-">
+  <title>ssh 使用 shadowsocks 加速</title>
+  <meta name="description" content="问题">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://1c7.me/">
+  <link rel="canonical" href="http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html">
   <link rel="alternate" type="application/rss+xml" title="Cheng Zheng's Blog" href="http://1c7.me/feed.xml">
   <link rel="icon" type="image/png" href="FAVICON.png">
 </head>
@@ -60,66 +59,91 @@
 
     <div class="page-content">
       <div class="wrapper">
-        <div class="home">
+        <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
-  <h1 class="page-heading">Posts</h1>
+  <header class="post-header">
+    <h1 class="post-title" itemprop="name headline">ssh 使用 shadowsocks 加速</h1>
+    <p class="post-meta"><time datetime="2016-08-04T16:41:01+08:00" itemprop="datePublished">Aug 4, 2016</time></p>
+  </header>
 
-  <ul class="post-list">
-    
-      <li>
-        <span class="post-meta">Aug 4, 2016</span>
+  <div class="post-content" itemprop="articleBody">
+    <h3 id="section">问题</h3>
 
-        <h2>
-          <a class="post-link" href="/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html">ssh 使用 shadowsocks 加速</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 4, 2016</span>
+<p>国内 ssh 国外的 vps 服务器,　要么死慢死慢(300ms+),　要么完全连不上.</p>
 
-        <h2>
-          <a class="post-link" href="/2016/08/04/Jekyll-utf-8-error.html">Jekyll 写中文报错 utf-8</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Aug 3, 2016</span>
+<p><br /></p>
 
-        <h2>
-          <a class="post-link" href="/2016/08/03/Soluation-to-Assest-Precompile-cause-server-CPU-usage-too-high.html">Soluation to Rails assest precompile cause server CPU usage too high</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 31, 2016</span>
+<h3 id="ubuntu-1604">解决方法 (环境: Ubuntu 16.04):</h3>
 
-        <h2>
-          <a class="post-link" href="/2016/07/31/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html">How I feel after switch from PHP to Ruby on Rails (6 month now)</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 22, 2016</span>
+<p>首先本地的 shadowssock 要跑起来<br />
+我用的是 shadowssock-qt 就是那个绿色圆圈图标的<br />
+安装 shadowssock-qt:</p>
 
-        <h2>
-          <a class="post-link" href="/2016/07/22/what-gem-you-should-know-as-a-Rails-newbie.html">What gem you should know as a Rails newbie</a>
-        </h2>
-      </li>
-    
-      <li>
-        <span class="post-meta">Jul 17, 2016</span>
-
-        <h2>
-          <a class="post-link" href="/2016/07/17/ajax-image-upload-with-rails-paperclip.html">[Ruby on Rails 4 + Paperclip gem]: Ajax image upload</a>
-        </h2>
-      </li>
-    
-  </ul>
-
-  <p class="rss-subscribe">subscribe <a href="/feed.xml">via RSS</a></p>
-
+<div class="highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository ppa:hzwhuang/ss-qt5
+sudo apt-get update
+sudo apt-get install shadowsocks-qt5
+</code></pre>
 </div>
 
+<p><br /></p>
+
+<p>第 1 步</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>touch ~/.ssh/config  
+</code></pre>
+</div>
+
+<p>新建这个配置文件</p>
+
+<p><br /></p>
+
+<p>第 2 步</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>vim ~/.ssh/config  
+</code></pre>
+</div>
+
+<p>vim 命令就是编辑这个文件</p>
+
+<p>按 <code class="highlighter-rouge">i</code> 进入编辑模式, 在这个文件里面写:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>ProxyCommand nc -x localhost:1080 %h %p  
+</code></pre>
+</div>
+<p>按 ESC 回到命令模式<br />
+然后 <code class="highlighter-rouge">:wq</code>　保存</p>
+
+<p><br />
+<br /></p>
+
+<p>现在就快多了<br />
+不需要的时候在前面加上 # 号注释掉, 需要的时候再打开</p>
+
+
+  </div>
+
+</article>
+<div id="disqus_thread"></div>
+<script>
+
+/**
+ *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+ *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+/*
+var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+};
+*/
+(function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = '//1c7-me.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+})();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+                                    
       </div>
     </div>
 
