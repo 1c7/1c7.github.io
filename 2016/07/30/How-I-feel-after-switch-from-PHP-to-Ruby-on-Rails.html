@@ -6,11 +6,11 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>ssh 使用 shadowsocks 加速</title>
-  <meta name="description" content="问题">
+  <title>How I feel after switch from PHP to Ruby on Rails (6 month now)</title>
+  <meta name="description" content="Estimate reading time: 6 minute">
 
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html">
+  <link rel="canonical" href="http://1c7.me/2016/07/30/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html">
   <link rel="alternate" type="application/rss+xml" title="Cheng Zheng's Blog" href="http://1c7.me/feed.xml">
   <link rel="icon" type="image/png" href="FAVICON.png">
 </head>
@@ -62,63 +62,183 @@
         <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title" itemprop="name headline">ssh 使用 shadowsocks 加速</h1>
-    <p class="post-meta"><time datetime="2016-08-04T01:41:01-07:00" itemprop="datePublished">Aug 4, 2016</time></p>
+    <h1 class="post-title" itemprop="name headline">How I feel after switch from PHP to Ruby on Rails (6 month now)</h1>
+    <p class="post-meta"><time datetime="2016-07-30T19:41:01-07:00" itemprop="datePublished">Jul 30, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="section">问题</h3>
-
-<p>国内 ssh 国外的 vps 服务器,　要么死慢死慢(300ms+),　要么完全连不上.</p>
+    <h5 id="estimate-reading-time-6-minute">Estimate reading time: 6 minute</h5>
 
 <p><br /></p>
 
-<h3 id="ubuntu-1604">解决方法 (环境: Ubuntu 16.04):</h3>
+<p>I have been PHP developer for little bit more than a year (2014~2015, December).  <br />
+(CodeIgniter, ThinkPHP, pure PHP)</p>
 
-<p>首先本地的 shadowssock 要跑起来  <br />
-我用的是 shadowssock-qt 就是那个绿色圆圈图标的  <br />
-安装 shadowssock-qt:</p>
+<p>not really happy period, just feel… ok.</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository ppa:hzwhuang/ss-qt5
-sudo apt-get update
-sudo apt-get install shadowsocks-qt5
+<p>and then I switch to Ruby on Rails, (2016,January~now) feel much happier now.     <br />
+let me tell you why</p>
+
+<p><br /></p>
+
+<h3 id="database-schema-synchronization">1. Database schema synchronization</h3>
+
+<p>Situation: you work with one other developer, two people in total.</p>
+
+<p>PHP</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>[You]:
+  1. trying to implement a new feature, you need new field in table
+
+  2. Write SQL or use some tool(SQLyog) to generate SQL: `CREATE TABLE user{ }`
+
+  3. copy &amp; paste into phpMyAdmin, Pass, no SQL syntax error  
+
+  4. copy &amp; paste into a place both people can visit, probably Github Wiki  
+
+
+[The other guy]:
+
+  1. git pull
+
+  2. error in browser? field close_time not exist? 
+    "I think he/she change database schema"
+
+  3. go to Github Wiki, "Yep, he/she changed that."
+  	copy &amp; paste SQL code into phpMyAdmin or any other SQL client software  
+
+</code></pre>
+</div>
+
+<p>Rails</p>
+
+<pre><code class="language-Ruby">[You]:
+
+  1. rails g migration add_something_to_some_model / rails g model User
+  2. rake db:migrate
+
+
+[The other guy]:
+
+  1. (in browser) pending migration error?
+  2. rake db:migrate
+</code></pre>
+<p>done!</p>
+
+<p><br /></p>
+
+<h3 id="relation">2. Relation</h3>
+
+<p>PHP</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  Define and remember it at database level
+</code></pre>
+</div>
+
+<p>Rails</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  has_one
+  has_many
+  belongs_to
+  has_and_belongs_to_many
 </code></pre>
 </div>
 
 <p><br /></p>
 
-<p>第 1 步</p>
+<h3 id="deploy">3. Deploy</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>touch ~/.ssh/config  
+<p>PHP</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>  1. Open up FTP client like 'FileZilla'
+
+  2. Remember which file you have changed
+  
+  3. Upload these file and cross finger hope you didn't miss any file 
+	or acciently overwrite file that you shouln't overwrite  
+
+  4. No Rollback, You have to manually upload previous version file  
 </code></pre>
 </div>
 
-<p>新建这个配置文件</p>
+<p>Rails</p>
 
-<p><br /></p>
+<div class="highlighter-rouge"><pre class="highlight"><code>  1. git push
 
-<p>第 2 步</p>
+  2. mina deploy
 
-<div class="highlighter-rouge"><pre class="highlight"><code>vim ~/.ssh/config  
+  3. things goes wrong?   mina deploy:rollback
 </code></pre>
 </div>
-
-<p>vim 命令就是编辑这个文件</p>
-
-<p>按 <code class="highlighter-rouge">i</code> 进入编辑模式, 在这个文件里面写:</p>
-
-<div class="highlighter-rouge"><pre class="highlight"><code>ProxyCommand nc -x localhost:1080 %h %p  
-</code></pre>
-</div>
-<p>按 ESC 回到命令模式  <br />
-然后 <code class="highlighter-rouge">:wq</code>　保存</p>
+<p>done!  <br />
+You can use Capistrano or <a href="https://github.com/mina-deploy/mina">Mina</a> to deploy your project, <br />
+I have try both, Mina is better for me</p>
 
 <p><br /><br />
 <br /></p>
 
-<p>现在就快多了  <br />
-不需要的时候在前面加上 # 号注释掉, 需要的时候再打开</p>
+<h3 id="conclusion">4. Conclusion</h3>
+<p>here just my feeling. for me, Rails make me a lot happier,  <br />
+the syntax of Ruby, the simplicity of Rails Active Record</p>
 
+<p>I don’t want argue that, Ruby on Rails is 100% better than PHP or what,  <br />
+argue that is just like argue what music or food is the best.     <br />
+everyone got a favorite.</p>
+
+<p>but, for me, Rails make me much more productive and make me a much happier web developer</p>
+
+<p><br /><br />
+<br /></p>
+
+<h3 id="btw-by-the-way">5. btw (by the way)</h3>
+<p>My experience is not just Rails and PHP</p>
+
+<p>I have try a lot of other language and framework:</p>
+
+<div class="highlighter-rouge"><pre class="highlight"><code>Node.js:     Express    
+Python:      Flask, Django, CherryPy, Bottle.py, Web.py, Tornado     
+PHP:         CodeIgniter, ThinkPHP  
+</code></pre>
+</div>
+
+<p>I still think Rails is the best among all of them.</p>
+
+<p>(I heard about <a href="http://koajs.com/">Koa.js</a> is awesome but I haven’t try it)</p>
+
+<h4 id="for-php-developer">For PHP developer:</h4>
+
+<p>I heard about a PHP framework call <a href="https://laravel.com/">Laravel</a> that feel like Rails but I have never try it  <br />
+so I am not sure how good it is,   <br />
+If you still don’t want switch to Rails, maybe you should check that out.</p>
+
+<p><br /><br />
+<br /></p>
+
+<h3 id="my-current-status-2016-august">6. My current status (2016, August)</h3>
+
+<ol>
+  <li>
+    <p>Just finish two side project (All by my own, idea, design, code):  <br />
+<a href="https://www.onereco.com/">OneReco</a> and <a href="http://www.youtube-sumup.com/">Sumup</a></p>
+  </li>
+  <li>
+    <p>Side project:   <br />
+working with 4 other people on a side project call “FrontSeat”    <br />
+(I would put a link here once it we finish beta version)    <br />
+(it’s a educational project)</p>
+  </li>
+  <li>
+    <p>Job:    <br />
+Looking for Ruby on Rails REMOTE position (I am living in China right now)</p>
+  </li>
+</ol>
+
+<p><br /><br />
+<br /></p>
+
+<h4 id="one-last-thing-imaging-steve-jobs-voice">One last thing (Imaging Steve Jobs voice)</h4>
+<p>I am not a native english speaker, so if I got grammar error,   <br />
+please point out, help me improve. Thanks</p>
 
   </div>
 

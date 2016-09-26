@@ -63,7 +63,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Soluation to Rails assest precompile cause server CPU usage too high</h1>
-    <p class="post-meta"><time datetime="2016-08-03T16:39:00+08:00" itemprop="datePublished">Aug 3, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-08-03T01:39:00-07:00" itemprop="datePublished">Aug 3, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -71,7 +71,7 @@
 
 <p><br /></p>
 
-<p>in mina <code class="highlighter-rouge">confir/deploy.rb</code> file<br />
+<p>in mina <code class="highlighter-rouge">confir/deploy.rb</code> file  <br />
 there are one line:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>invoke :'rails:assets_precompile'
@@ -101,8 +101,8 @@ Connection to 107.170.237.232 closed.
 </div>
 <p><br /></p>
 
-<p>And most importantly when I run <code class="highlighter-rouge">ps aux</code> <br />
-Node.js take 97~100% CPU <br />
+<p>And most importantly when I run <code class="highlighter-rouge">ps aux</code>   <br />
+Node.js take 97~100% CPU   <br />
 WTF</p>
 
 <p><br /></p>
@@ -120,7 +120,7 @@ WTF</p>
   </li>
 </ol>
 
-<p>I saw the third soluation from here: <br />
+<p>I saw the third soluation from here:   <br />
 <a href="http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ">http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ</a></p>
 
 <p><br /></p>

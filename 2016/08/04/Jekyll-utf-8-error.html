@@ -63,7 +63,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Jekyll 写中文报错 utf-8</h1>
-    <p class="post-meta"><time datetime="2016-08-04T16:41:01+08:00" itemprop="datePublished">Aug 4, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-08-04T01:41:01-07:00" itemprop="datePublished">Aug 4, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -79,7 +79,7 @@ jekyll 3.1.6 | Error:  invalid byte sequence in UTF-8
 </code></pre>
 </div>
 
-<p>解决方法:<br />
+<p>解决方法:  <br />
 <code class="highlighter-rouge">_config.yml</code> 里最后一行加上 <code class="highlighter-rouge">encoding: utf-8</code></p>
 
 <p>然后 markdown 文件以 utf-8 格式另存, 覆盖掉原来的文件即可 (我用的gedit)</p>
