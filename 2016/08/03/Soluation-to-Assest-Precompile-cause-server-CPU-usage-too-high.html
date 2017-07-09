@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://1c7.me/2016/08/03/Soluation-to-Assest-Precompile-cause-server-CPU-usage-too-high.html">
-  <link rel="alternate" type="application/rss+xml" title="Cheng Zheng's Blog" href="http://1c7.me/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="1c7 blog" href="http://1c7.me/feed.xml">
   <link rel="icon" type="image/png" href="FAVICON.png">
 </head>
 
@@ -22,7 +22,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Cheng Zheng's Blog</a>
+    <a class="site-title" href="/">1c7 blog</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -63,7 +63,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">Soluation to Rails assest precompile cause server CPU usage too high</h1>
-    <p class="post-meta"><time datetime="2016-08-03T01:39:00-07:00" itemprop="datePublished">Aug 3, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-08-03T16:39:00+08:00" itemprop="datePublished">Aug 3, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -71,7 +71,7 @@
 
 <p><br /></p>
 
-<p>in mina <code class="highlighter-rouge">confir/deploy.rb</code> file  <br />
+<p>in mina <code class="highlighter-rouge">confir/deploy.rb</code> file<br />
 there are one line:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>invoke :'rails:assets_precompile'
@@ -101,8 +101,8 @@ Connection to 107.170.237.232 closed.
 </div>
 <p><br /></p>
 
-<p>And most importantly when I run <code class="highlighter-rouge">ps aux</code>   <br />
-Node.js take 97~100% CPU   <br />
+<p>And most importantly when I run <code class="highlighter-rouge">ps aux</code> <br />
+Node.js take 97~100% CPU <br />
 WTF</p>
 
 <p><br /></p>
@@ -120,7 +120,7 @@ WTF</p>
   </li>
 </ol>
 
-<p>I saw the third soluation from here:   <br />
+<p>I saw the third soluation from here: <br />
 <a href="http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ">http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ</a></p>
 
 <p><br /></p>
@@ -159,7 +159,7 @@ var disqus_config = function () {
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Cheng Zheng's Blog</h2>
+    <h2 class="footer-heading">1c7 blog</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -189,7 +189,7 @@ var disqus_config = function () {
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
+        <p>Hi, I'm Cheng Zheng, Web developer(mostly Ruby on Rails）
 </p>
       </div>
     </div>

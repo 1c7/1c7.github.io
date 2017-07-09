@@ -1,98 +1,115 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Cheng Zheng&#39;s Blog</title>
-    <description>Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
+    <title>1c7 blog</title>
+    <description>Hi, I'm Cheng Zheng, Web developer(mostly Ruby on Rails）
 </description>
     <link>http://1c7.me/</link>
     <atom:link href="http://1c7.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 02 Oct 2016 23:09:38 -0700</pubDate>
-    <lastBuildDate>Sun, 02 Oct 2016 23:09:38 -0700</lastBuildDate>
-    <generator>Jekyll v3.0.1</generator>
+    <pubDate>Sun, 09 Jul 2017 22:01:39 +0800</pubDate>
+    <lastBuildDate>Sun, 09 Jul 2017 22:01:39 +0800</lastBuildDate>
+    <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>How Sharetribe Work[2] - get /robots.txt =&gt; RobotsGenerator?</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/robot.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
+        <title>寓住 - 根据城市筛选公寓（我的个人项目）</title>
+        <description>&lt;h4 id=&quot;httpyuzhume&quot;&gt;&lt;a href=&quot;http://yuzhu.me&quot; target=&quot;_blank&quot;&gt;http://yuzhu.me&lt;/a&gt;&lt;/h4&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-The &lt;code class=&quot;highlighter-rouge&quot;&gt;RobotsGenerator&lt;/code&gt; defined in &lt;code class=&quot;highlighter-rouge&quot;&gt;sharetribe/lib/rack_middleware/robots_generator.rb&lt;/code&gt;,&lt;br /&gt;
-Why this work?  &lt;br /&gt;
-&lt;br /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;我碰到的问题-或者说换句话说我为什么写这个&quot;&gt;我碰到的问题 (或者说换句话说”我为什么写这个”)&lt;/h3&gt;
 
-&lt;p&gt;&lt;img src=&quot;/images/robot2.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/robot3.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
+&lt;p&gt;我需要去一个新城市，那么租房子是必须的，除了普通的渠道之外（58，安居客，线下各种中介等等）。
+租公寓也是一种选择，我还从来没有租过公寓呢。
+如果你不知道公寓是什么，大致来说就是人家都装修好了，然后提供一些额外服务比如可能有一些公共空间，也许会有一些活动。
+也许会有公共健身房之类的。等等一些其他服务。&lt;br /&gt;
+但对我来说我最想要的就是不用装修拎包入住，不用担心缺了什么家具/生活用具要去自己买，而且好看。&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;如果你需要例子来具体了解一下公寓的定义，可以点这里：
+&lt;a href=&quot;https://shimo.im/sheet/DyKf91OkXE4YXSuD&quot; target=&quot;_blank&quot;&gt;一个石墨文档的链接&lt;/a&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;because&quot;&gt;Because&lt;/h2&gt;
+&lt;h3 id=&quot;但是&quot;&gt;但是&lt;/h3&gt;
+&lt;p&gt;我找不到任何一个网站可以让我根据城市来筛选公寓，我根本不在乎是什么品牌，我就希望知道那个城市有什么公寓，
+然后我自己去调查然后做租房决定就好了。&lt;/p&gt;
 
-&lt;p&gt;in &lt;code class=&quot;highlighter-rouge&quot;&gt;sharetribe/config/application.rb&lt;/code&gt;:  &lt;br /&gt;
-&lt;img src=&quot;/images/auto_load.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
+&lt;h3 id=&quot;所以&quot;&gt;所以&lt;/h3&gt;
+&lt;p&gt;我花了几天时间把这个简单的网站写出来了。希望对你有帮助。&lt;/p&gt;
 
-&lt;p&gt;it Auto Load this file, that’s why it work.&lt;/p&gt;
-
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;what-this-for&quot;&gt;What this for?&lt;/h2&gt;
-&lt;p&gt;actually Sharetribe &lt;a href=&quot;http://avandamiri.com/2011/10/11/serving-different-robots-using-rack.html&quot;&gt;provide a link&lt;/a&gt; in &lt;code class=&quot;highlighter-rouge&quot;&gt;robots_generator.rb&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;in short, it can make a dynamic &lt;code class=&quot;highlighter-rouge&quot;&gt;robots.txt&lt;/code&gt; file&lt;/p&gt;
-
+&lt;p&gt;就这样，没了。感谢阅读。&lt;/p&gt;
 </description>
-        <pubDate>Mon, 26 Sep 2016 02:21:01 -0700</pubDate>
-        <link>http://1c7.me/2016/09/26/How-Sharetribe-work-2-RobotsGenerator.html</link>
-        <guid isPermaLink="true">http://1c7.me/2016/09/26/How-Sharetribe-work-2-RobotsGenerator.html</guid>
+        <pubDate>Sun, 09 Jul 2017 21:44:00 +0800</pubDate>
+        <link>http://1c7.me/2017/07/09/yuzhu.html</link>
+        <guid isPermaLink="true">http://1c7.me/2017/07/09/yuzhu.html</guid>
         
         
       </item>
     
       <item>
-        <title>How Sharetribe Work[1] - Why there are so many &#39;Maybe&#39; in code?</title>
-        <description>&lt;p&gt;&lt;img src=&quot;/images/maybe.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
+        <title>6 Startups in 12 month</title>
+        <description>&lt;p&gt;Hi, My name is Cheng Zheng.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-There are many ‘Maybe()’ in Sharetribe code. what that mean?&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;I am gonna force myself (2017-July to 2018-July) Come up with idea, validate &amp;amp; build  &amp;amp; launch&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-Example:&lt;/p&gt;
+&lt;h2 id=&quot;every-2-month&quot;&gt;Every 2 month&lt;/h2&gt;
+&lt;p&gt;the reason for that is because 1 month is too short for me to actually done something.&lt;/p&gt;
 
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Maybe&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;response&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:success&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;or_else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kp&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;flash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:notice&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;layouts.notifications.community_updated&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;flash&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:error&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;t&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;layouts.notifications.community_update_failed&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-This &lt;code class=&quot;highlighter-rouge&quot;&gt;Maybe()&lt;/code&gt; come from a gem called &lt;a href=&quot;https://rubygems.org/gems/possibly/versions/0.2.0&quot;&gt;possibly&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;I am super inspire by the Nomad List &lt;a href=&quot;https://levels.io/12-startups-12-months/&quot;&gt;“I’m Launching 12 Startups in 12 Months”&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;possibly&lt;/code&gt; gem is create by Sharetribe team, they &lt;a href=&quot;https://medium.com/learnings-in-and-around-sharetribe/option-pattern-in-ruby-7b0f7c5abdb6#.4nd1g2wmc&quot;&gt;wrote a blog about possibly&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;also the &lt;a href=&quot;https://www.indiehackers.com/businesses&quot;&gt;Indie Hacker Interview&lt;/a&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;usage&quot;&gt;Usage&lt;/h3&gt;
-&lt;p&gt;&lt;a href=&quot;https://github.com/rap1ds/ruby-possibly&quot;&gt;possibly (Github repo)&lt;/a&gt;  &lt;br /&gt;
-README got very simple and clear example, just checkout there.&lt;/p&gt;
+&lt;p&gt;I am not just recently “discover” them, I watch these for quite some time now.&lt;/p&gt;
 
+&lt;p&gt;Paul Graham, YC(blog), Sam Altman, Courtland Allen, Instapaintng, people’s post in IH forum. Product Hunt, Slack: startupstudygroup, Sideproject, zero2growth.
+ bunch of YC video on Youtube, «Start Small Stay Small», Hacker News(Ask HN/Show HN)&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;I am 22, Web developer with 2 years experience, (first year PHP, second year Ruby on Rails, and I am gonna continue use RoR)&lt;/p&gt;
+
+&lt;p&gt;weak on Front-End (only know jQuery)(Working on it, Ember.js + React.js)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;I really like the idea of make a product people like, and people pay for the product. and I can make living on that.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;I have done onsite job, remote job, now I want more freedom.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;i-just-wanna-push-myself-at-least-do-something-by-writing-this-post&quot;&gt;I just wanna push myself at least do something by writing this post.&lt;/h3&gt;
+&lt;h3 id=&quot;blog-is-like-some-kind-of-public-commitment&quot;&gt;blog is like some kind of public commitment.&lt;/h3&gt;
+&lt;h3 id=&quot;i-would-update-my-project-in-this-post&quot;&gt;I would update my project in this post.&lt;/h3&gt;
+&lt;h2 id=&quot;if-you-are-interesting-in-my-progressmailchimp&quot;&gt;If you are interesting in my progress(MailChimp):&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&quot;http://eepurl.com/cT76w5&quot;&gt;http://eepurl.com/cT76w5&lt;/a&gt;
+I am not gonna send any BS to you.&lt;/p&gt;
+
+&lt;p&gt;Use MailChimp is for save your time, you don’t need check this blog daily/weekly/monthly at all, not gonna miss out any important stuff.&lt;/p&gt;
+
+&lt;h2 id=&quot;thank-you-and-thats-all&quot;&gt;Thank you, and that’s all.&lt;/h2&gt;
 </description>
-        <pubDate>Mon, 26 Sep 2016 00:21:01 -0700</pubDate>
-        <link>http://1c7.me/2016/09/26/How-Sharetribe-work-1-Maybe.html</link>
-        <guid isPermaLink="true">http://1c7.me/2016/09/26/How-Sharetribe-work-1-Maybe.html</guid>
+        <pubDate>Tue, 27 Jun 2017 19:27:43 +0800</pubDate>
+        <link>http://1c7.me/2017/06/27/12-month-6-project.html</link>
+        <guid isPermaLink="true">http://1c7.me/2017/06/27/12-month-6-project.html</guid>
         
         
       </item>
     
       <item>
         <title>ssh 使用 shadowsocks 加速</title>
-        <description>&lt;h3 id=&quot;section&quot;&gt;问题&lt;/h3&gt;
+        <description>&lt;h3 id=&quot;问题&quot;&gt;问题&lt;/h3&gt;
 
 &lt;p&gt;国内 ssh 国外的 vps 服务器,　要么死慢死慢(300ms+),　要么完全连不上.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;ubuntu-1604&quot;&gt;解决方法 (环境: Ubuntu 16.04):&lt;/h3&gt;
+&lt;h3 id=&quot;解决方法-环境-ubuntu-1604&quot;&gt;解决方法 (环境: Ubuntu 16.04):&lt;/h3&gt;
 
-&lt;p&gt;首先本地的 shadowssock 要跑起来  &lt;br /&gt;
-我用的是 shadowssock-qt 就是那个绿色圆圈图标的  &lt;br /&gt;
+&lt;p&gt;首先本地的 shadowssock 要跑起来&lt;br /&gt;
+我用的是 shadowssock-qt 就是那个绿色圆圈图标的&lt;br /&gt;
 安装 shadowssock-qt:&lt;/p&gt;
 
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;sudo add-apt-repository ppa:hzwhuang/ss-qt5
@@ -126,17 +143,17 @@ sudo apt-get install shadowsocks-qt5
 &lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;ProxyCommand nc -x localhost:1080 %h %p  
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;按 ESC 回到命令模式  &lt;br /&gt;
+&lt;p&gt;按 ESC 回到命令模式&lt;br /&gt;
 然后 &lt;code class=&quot;highlighter-rouge&quot;&gt;:wq&lt;/code&gt;　保存&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;现在就快多了  &lt;br /&gt;
+&lt;p&gt;现在就快多了&lt;br /&gt;
 不需要的时候在前面加上 # 号注释掉, 需要的时候再打开&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 04 Aug 2016 01:41:01 -0700</pubDate>
+        <pubDate>Thu, 04 Aug 2016 16:41:01 +0800</pubDate>
         <link>http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html</link>
         <guid isPermaLink="true">http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html</guid>
         
@@ -157,7 +174,7 @@ jekyll 3.1.6 | Error:  invalid byte sequence in UTF-8
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;解决方法:  &lt;br /&gt;
+&lt;p&gt;解决方法:&lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;_config.yml&lt;/code&gt; 里最后一行加上 &lt;code class=&quot;highlighter-rouge&quot;&gt;encoding: utf-8&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;然后 markdown 文件以 utf-8 格式另存, 覆盖掉原来的文件即可 (我用的gedit)&lt;/p&gt;
@@ -165,7 +182,7 @@ jekyll 3.1.6 | Error:  invalid byte sequence in UTF-8
 &lt;p&gt;我的环境是 &lt;code class=&quot;highlighter-rouge&quot;&gt;jekyll 3.1.6&lt;/code&gt; + &lt;code class=&quot;highlighter-rouge&quot;&gt;Ubuntu16.04&lt;/code&gt; 管用&lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 04 Aug 2016 01:41:01 -0700</pubDate>
+        <pubDate>Thu, 04 Aug 2016 16:41:01 +0800</pubDate>
         <link>http://1c7.me/2016/08/04/Jekyll-utf-8-error.html</link>
         <guid isPermaLink="true">http://1c7.me/2016/08/04/Jekyll-utf-8-error.html</guid>
         
@@ -178,10 +195,10 @@ jekyll 3.1.6 | Error:  invalid byte sequence in UTF-8
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;in mina &lt;code class=&quot;highlighter-rouge&quot;&gt;confir/deploy.rb&lt;/code&gt; file  &lt;br /&gt;
+&lt;p&gt;in mina &lt;code class=&quot;highlighter-rouge&quot;&gt;confir/deploy.rb&lt;/code&gt; file&lt;br /&gt;
 there are one line:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;invoke :&#39;rails:assets_precompile&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;invoke :'rails:assets_precompile'
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 &lt;p&gt;it mean precompile assest file on server&lt;/p&gt;
@@ -208,8 +225,8 @@ Connection to 107.170.237.232 closed.
 &lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;And most importantly when I run &lt;code class=&quot;highlighter-rouge&quot;&gt;ps aux&lt;/code&gt;   &lt;br /&gt;
-Node.js take 97~100% CPU   &lt;br /&gt;
+&lt;p&gt;And most importantly when I run &lt;code class=&quot;highlighter-rouge&quot;&gt;ps aux&lt;/code&gt; &lt;br /&gt;
+Node.js take 97~100% CPU &lt;br /&gt;
 WTF&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -227,7 +244,7 @@ WTF&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I saw the third soluation from here:   &lt;br /&gt;
+&lt;p&gt;I saw the third soluation from here: &lt;br /&gt;
 &lt;a href=&quot;http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ&quot;&gt;http://stackoverflow.com/questions/22272339/rake-assetsprecompile-gets-killed-when-there-is-a-console-session-open-in-produ&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -235,7 +252,7 @@ WTF&lt;/p&gt;
 &lt;p&gt;if you got better soluation, please comment let me know, thanks&lt;/p&gt;
 
 </description>
-        <pubDate>Wed, 03 Aug 2016 01:39:00 -0700</pubDate>
+        <pubDate>Wed, 03 Aug 2016 16:39:00 +0800</pubDate>
         <link>http://1c7.me/2016/08/03/Soluation-to-Assest-Precompile-cause-server-CPU-usage-too-high.html</link>
         <guid isPermaLink="true">http://1c7.me/2016/08/03/Soluation-to-Assest-Precompile-cause-server-CPU-usage-too-high.html</guid>
         
@@ -248,17 +265,17 @@ WTF&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;I have been PHP developer for little bit more than a year (2014~2015, December).  &lt;br /&gt;
+&lt;p&gt;I have been PHP developer for little bit more than a year (2014~2015, December).&lt;br /&gt;
 (CodeIgniter, ThinkPHP, pure PHP)&lt;/p&gt;
 
 &lt;p&gt;not really happy period, just feel… ok.&lt;/p&gt;
 
-&lt;p&gt;and then I switch to Ruby on Rails, (2016,January~now) feel much happier now.     &lt;br /&gt;
+&lt;p&gt;and then I switch to Ruby on Rails, (2016,January~now) feel much happier now.   &lt;br /&gt;
 let me tell you why&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;database-schema-synchronization&quot;&gt;1. Database schema synchronization&lt;/h3&gt;
+&lt;h3 id=&quot;1-database-schema-synchronization&quot;&gt;1. Database schema synchronization&lt;/h3&gt;
 
 &lt;p&gt;Situation: you work with one other developer, two people in total.&lt;/p&gt;
 
@@ -304,7 +321,7 @@ let me tell you why&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;relation&quot;&gt;2. Relation&lt;/h3&gt;
+&lt;h3 id=&quot;2-relation&quot;&gt;2. Relation&lt;/h3&gt;
 
 &lt;p&gt;PHP&lt;/p&gt;
 
@@ -323,16 +340,16 @@ let me tell you why&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;deploy&quot;&gt;3. Deploy&lt;/h3&gt;
+&lt;h3 id=&quot;3-deploy&quot;&gt;3. Deploy&lt;/h3&gt;
 
 &lt;p&gt;PHP&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. Open up FTP client like &#39;FileZilla&#39;
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;  1. Open up FTP client like 'FileZilla'
 
   2. Remember which file you have changed
   
-  3. Upload these file and cross finger hope you didn&#39;t miss any file 
-	or acciently overwrite file that you shouln&#39;t overwrite  
+  3. Upload these file and cross finger hope you didn't miss any file 
+	or acciently overwrite file that you shouln't overwrite  
 
   4. No Rollback, You have to manually upload previous version file  
 &lt;/code&gt;&lt;/pre&gt;
@@ -347,27 +364,27 @@ let me tell you why&lt;/p&gt;
   3. things goes wrong?   mina deploy:rollback
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
-&lt;p&gt;done!  &lt;br /&gt;
-You can use Capistrano or &lt;a href=&quot;https://github.com/mina-deploy/mina&quot;&gt;Mina&lt;/a&gt; to deploy your project, &lt;br /&gt;
+&lt;p&gt;done!&lt;br /&gt;
+You can use Capistrano or &lt;a href=&quot;https://github.com/mina-deploy/mina&quot;&gt;Mina&lt;/a&gt; to deploy your project, 
 I have try both, Mina is better for me&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;conclusion&quot;&gt;4. Conclusion&lt;/h3&gt;
-&lt;p&gt;here just my feeling. for me, Rails make me a lot happier,  &lt;br /&gt;
+&lt;h3 id=&quot;4-conclusion&quot;&gt;4. Conclusion&lt;/h3&gt;
+&lt;p&gt;here just my feeling. for me, Rails make me a lot happier,&lt;br /&gt;
 the syntax of Ruby, the simplicity of Rails Active Record&lt;/p&gt;
 
-&lt;p&gt;I don’t want argue that, Ruby on Rails is 100% better than PHP or what,  &lt;br /&gt;
-argue that is just like argue what music or food is the best.     &lt;br /&gt;
+&lt;p&gt;I don’t want argue that, Ruby on Rails is 100% better than PHP or what,&lt;br /&gt;
+argue that is just like argue what music or food is the best.   &lt;br /&gt;
 everyone got a favorite.&lt;/p&gt;
 
 &lt;p&gt;but, for me, Rails make me much more productive and make me a much happier web developer&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;btw-by-the-way&quot;&gt;5. btw (by the way)&lt;/h3&gt;
+&lt;h3 id=&quot;5-btw-by-the-way&quot;&gt;5. btw (by the way)&lt;/h3&gt;
 &lt;p&gt;My experience is not just Rails and PHP&lt;/p&gt;
 
 &lt;p&gt;I have try a lot of other language and framework:&lt;/p&gt;
@@ -384,42 +401,42 @@ PHP:         CodeIgniter, ThinkPHP
 
 &lt;h4 id=&quot;for-php-developer&quot;&gt;For PHP developer:&lt;/h4&gt;
 
-&lt;p&gt;I heard about a PHP framework call &lt;a href=&quot;https://laravel.com/&quot;&gt;Laravel&lt;/a&gt; that feel like Rails but I have never try it  &lt;br /&gt;
-so I am not sure how good it is,   &lt;br /&gt;
+&lt;p&gt;I heard about a PHP framework call &lt;a href=&quot;https://laravel.com/&quot;&gt;Laravel&lt;/a&gt; that feel like Rails but I have never try it&lt;br /&gt;
+so I am not sure how good it is, &lt;br /&gt;
 If you still don’t want switch to Rails, maybe you should check that out.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;my-current-status-2016-august&quot;&gt;6. My current status (2016, August)&lt;/h3&gt;
+&lt;h3 id=&quot;6-my-current-status-2016-august&quot;&gt;6. My current status (2016, August)&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;Just finish two side project (All by my own, idea, design, code):  &lt;br /&gt;
+    &lt;p&gt;Just finish two side project (All by my own, idea, design, code):&lt;br /&gt;
 &lt;a href=&quot;https://www.onereco.com/&quot;&gt;OneReco&lt;/a&gt; and &lt;a href=&quot;http://www.youtube-sumup.com/&quot;&gt;Sumup&lt;/a&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Side project:   &lt;br /&gt;
-working with 4 other people on a side project call “FrontSeat”    &lt;br /&gt;
-(I would put a link here once it we finish beta version)    &lt;br /&gt;
+    &lt;p&gt;Side project: &lt;br /&gt;
+working with 4 other people on a side project call “FrontSeat”  &lt;br /&gt;
+(I would put a link here once it we finish beta version)  &lt;br /&gt;
 (it’s a educational project)&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;Job:    &lt;br /&gt;
+    &lt;p&gt;Job:  &lt;br /&gt;
 Looking for Ruby on Rails REMOTE position (I am living in China right now)&lt;/p&gt;
   &lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h4 id=&quot;one-last-thing-imaging-steve-jobs-voice&quot;&gt;One last thing (Imaging Steve Jobs voice)&lt;/h4&gt;
-&lt;p&gt;I am not a native english speaker, so if I got grammar error,   &lt;br /&gt;
+&lt;p&gt;I am not a native english speaker, so if I got grammar error, &lt;br /&gt;
 please point out, help me improve. Thanks&lt;/p&gt;
 </description>
-        <pubDate>Sat, 30 Jul 2016 19:41:01 -0700</pubDate>
-        <link>http://1c7.me/2016/07/30/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html</link>
-        <guid isPermaLink="true">http://1c7.me/2016/07/30/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html</guid>
+        <pubDate>Sun, 31 Jul 2016 10:41:01 +0800</pubDate>
+        <link>http://1c7.me/2016/07/31/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html</link>
+        <guid isPermaLink="true">http://1c7.me/2016/07/31/How-I-feel-after-switch-from-PHP-to-Ruby-on-Rails.html</guid>
         
         
       </item>
@@ -431,59 +448,59 @@ please point out, help me improve. Thanks&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;target-reader-people-who-just-finish-rails-101-tutorial&quot;&gt;Target reader: People who just finish Rails 101 tutorial.&lt;/h3&gt;
-&lt;p&gt;by 101, I mean general introduction tutorial, probably the offcial Rails guide, or video on Youtube.  &lt;br /&gt;
+&lt;p&gt;by 101, I mean general introduction tutorial, probably the offcial Rails guide, or video on Youtube.&lt;br /&gt;
 maybe some Blog.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;p&gt;Well, now you want learn more,     &lt;br /&gt;
-You may be thinking, what gem are people using?     &lt;br /&gt;
+&lt;p&gt;Well, now you want learn more,   &lt;br /&gt;
+You may be thinking, what gem are people using?   &lt;br /&gt;
 here’s a list of gem I think you should know.&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;database&quot;&gt;Database&lt;/h3&gt;
-&lt;p&gt;SQLite is for Small website,  &lt;br /&gt;
-if you want grow bigger than that,  &lt;br /&gt;
+&lt;p&gt;SQLite is for Small website,&lt;br /&gt;
+if you want grow bigger than that,&lt;br /&gt;
 you need MySQL or PostgreSQL or some other DB (maybe MongoDB or RethinkDB?)&lt;/p&gt;
 
-&lt;p&gt;for MySQL you should use gem &lt;a href=&quot;https://rubygems.org/gems/mysql2&quot;&gt;mysql2&lt;/a&gt;    &lt;br /&gt;
+&lt;p&gt;for MySQL you should use gem &lt;a href=&quot;https://rubygems.org/gems/mysql2&quot;&gt;mysql2&lt;/a&gt;  &lt;br /&gt;
 for PostgreSQL you should use gem &lt;a href=&quot;https://rubygems.org/gems/pg/&quot;&gt;pg&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;deploy&quot;&gt;Deploy&lt;/h3&gt;
-&lt;p&gt;Mina (Recommend)   &lt;br /&gt;
+&lt;p&gt;Mina (Recommend) &lt;br /&gt;
 Capistrano 3&lt;/p&gt;
 
-&lt;p&gt;it’s 2016, if possible, don’t use FTP software like FileZilla to deploy.  &lt;br /&gt;
-you will get tried very soon.  &lt;br /&gt;
+&lt;p&gt;it’s 2016, if possible, don’t use FTP software like FileZilla to deploy.&lt;br /&gt;
+you will get tried very soon.&lt;br /&gt;
 try to automate everything, that’s the beauty of computer right?&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;server&quot;&gt;Server&lt;/h3&gt;
-&lt;p&gt;Unicorn  &lt;br /&gt;
-Thin  &lt;br /&gt;
-Passanger  &lt;br /&gt;
+&lt;p&gt;Unicorn&lt;br /&gt;
+Thin&lt;br /&gt;
+Passanger&lt;br /&gt;
 Puma (I am using this, and it’s Rails 5 default Server)&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;upload-imagefile&quot;&gt;Upload image/file&lt;/h3&gt;
-&lt;p&gt;CarrierWare  &lt;br /&gt;
-PaperClip (I am using this)  &lt;br /&gt;
+&lt;p&gt;CarrierWare&lt;br /&gt;
+PaperClip (I am using this)&lt;br /&gt;
 Refile&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
 &lt;h3 id=&quot;login&quot;&gt;Login&lt;/h3&gt;
 
-&lt;p&gt;[Devise]   &lt;br /&gt;
+&lt;p&gt;[Devise] &lt;br /&gt;
 	Speed up making your own login, like email &amp;amp; password, username &amp;amp; password&lt;/p&gt;
 
-&lt;p&gt;[Omniauth]    &lt;br /&gt;
+&lt;p&gt;[Omniauth]  &lt;br /&gt;
 	Third party login, like Facebook Twitter Github Google Linkedin&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
@@ -491,8 +508,15 @@ Refile&lt;/p&gt;
 &lt;h3 id=&quot;test&quot;&gt;Test&lt;/h3&gt;
 &lt;p&gt;Rspec&lt;/p&gt;
 
+&lt;!-- &lt;br/&gt;
+
+### Pagination
+
+Kaminari 
+will_paginate  --&gt;
+
 </description>
-        <pubDate>Fri, 22 Jul 2016 04:33:43 -0700</pubDate>
+        <pubDate>Fri, 22 Jul 2016 19:33:43 +0800</pubDate>
         <link>http://1c7.me/2016/07/22/what-gem-you-should-know-as-a-Rails-newbie.html</link>
         <guid isPermaLink="true">http://1c7.me/2016/07/22/what-gem-you-should-know-as-a-Rails-newbie.html</guid>
         
@@ -505,9 +529,9 @@ Refile&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;why&quot;&gt;0. why&lt;/h2&gt;
-&lt;p&gt;I was trying to create &lt;strong&gt;Ajax Image Upload API&lt;/strong&gt; for My Rails application,  &lt;br /&gt;
-So I search on Google,   &lt;br /&gt;
+&lt;h2 id=&quot;0-why&quot;&gt;0. why&lt;/h2&gt;
+&lt;p&gt;I was trying to create &lt;strong&gt;Ajax Image Upload API&lt;/strong&gt; for My Rails application,&lt;br /&gt;
+So I search on Google, &lt;br /&gt;
 These article:&lt;/p&gt;
 
 &lt;ol&gt;
@@ -516,35 +540,35 @@ These article:&lt;/p&gt;
   &lt;li&gt;over complex.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;p&gt;I poke around little bit, and come with a simple solution  &lt;br /&gt;
+&lt;p&gt;I poke around little bit, and come with a simple solution&lt;br /&gt;
 Here is my solution&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;preview-final-result&quot;&gt;0.5 Preview final result:&lt;/h2&gt;
-&lt;p&gt;&lt;img src=&quot;/images/post1/5.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/post1/6.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/post1/7.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/post1/8.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/post1/9.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
-&lt;img src=&quot;/images/post1/10.png&quot; alt=&quot;page&quot; /&gt;&lt;br /&gt;
+&lt;h2 id=&quot;05-preview-final-result&quot;&gt;0.5 Preview final result:&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/images/post1/5.png&quot; alt=&quot;page&quot; /&gt;
+&lt;img src=&quot;/images/post1/6.png&quot; alt=&quot;page&quot; /&gt;
+&lt;img src=&quot;/images/post1/7.png&quot; alt=&quot;page&quot; /&gt;
+&lt;img src=&quot;/images/post1/8.png&quot; alt=&quot;page&quot; /&gt;
+&lt;img src=&quot;/images/post1/9.png&quot; alt=&quot;page&quot; /&gt;
+&lt;img src=&quot;/images/post1/10.png&quot; alt=&quot;page&quot; /&gt;
 &lt;img src=&quot;/images/post1/11.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;well-lets-do-this-step-by-step&quot;&gt;Well, let’s do this step by step&lt;/h2&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;create-a-rails-project&quot;&gt;1. Create a Rails project&lt;/h2&gt;
+&lt;h2 id=&quot;1-create-a-rails-project&quot;&gt;1. Create a Rails project&lt;/h2&gt;
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby 
 rails new img --skip-bundle
 &lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;install-paperclip-gem&quot;&gt;2. Install Paperclip gem:&lt;/h2&gt;
+&lt;h2 id=&quot;2-install-paperclip-gem&quot;&gt;2. Install Paperclip gem:&lt;/h2&gt;
 &lt;p&gt;&lt;a href=&quot;https://github.com/thoughtbot/paperclip&quot;&gt;following instruction come from offcial guide&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;add following line to gemfile&lt;/p&gt;
@@ -553,15 +577,15 @@ rails new img --skip-bundle
 gem &quot;paperclip&quot;, &quot;~&amp;gt; 5.0.0&quot; 
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;and then   &lt;br /&gt;
+&lt;p&gt;and then &lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;bundle install&lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;or   &lt;br /&gt;
+&lt;p&gt;or &lt;br /&gt;
 &lt;code class=&quot;highlighter-rouge&quot;&gt;gem install paperclip&lt;/code&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;create-model-for-image-and-necessary-migration&quot;&gt;3. Create model for Image and necessary migration&lt;/h2&gt;
+&lt;h2 id=&quot;3-create-model-for-image-and-necessary-migration&quot;&gt;3. Create model for Image and necessary migration&lt;/h2&gt;
 
 &lt;p&gt;run&lt;/p&gt;
 
@@ -571,7 +595,7 @@ rails g model Image
 
 &lt;p&gt;copy &amp;amp; paste following code into &lt;code class=&quot;highlighter-rouge&quot;&gt;app/models/image.rb&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;has_attached_file&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;styles: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;medium: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;300x300&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;thumb: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;100x100&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;validates_attachment_content_type&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;content_type: &lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/\Aimage\/.*\Z/&lt;/span&gt;
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -582,7 +606,7 @@ rails g model Image
 
 &lt;p&gt;inside &lt;code class=&quot;highlighter-rouge&quot;&gt;db/migrate/20160721100726_add_attachment_to_image.rb&lt;/code&gt; file&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AddAttachmentToImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Migration&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;AddAttachmentToImage&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Migration&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;up&lt;/span&gt;
     &lt;span class=&quot;n&quot;&gt;add_attachment&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:images&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:image&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -602,17 +626,17 @@ bundle exec rake db:migrate
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;routes&quot;&gt;4. Routes&lt;/h2&gt;
+&lt;h2 id=&quot;4-routes&quot;&gt;4. Routes&lt;/h2&gt;
 
 &lt;p&gt;config/routes.rb&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;draw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;no&quot;&gt;Rails&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;application&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;routes&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;draw&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;do&lt;/span&gt;
 
   &lt;span class=&quot;c1&quot;&gt;# for view&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;/image&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;test#image&#39;&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;get&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'/image'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'test#image'&lt;/span&gt;
 
   &lt;span class=&quot;c1&quot;&gt;# for ajax&lt;/span&gt;
-  &lt;span class=&quot;n&quot;&gt;put&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;api/image_upload&#39;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;api#image_upload&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;as: :image_upload&lt;/span&gt;
+  &lt;span class=&quot;n&quot;&gt;put&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'api/image_upload'&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'api#image_upload'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;as: :image_upload&lt;/span&gt;
 
 &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;
@@ -624,29 +648,29 @@ bundle exec rake db:migrate
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;view&quot;&gt;5. View&lt;/h2&gt;
+&lt;h2 id=&quot;5-view&quot;&gt;5. View&lt;/h2&gt;
 
 &lt;p&gt;put following content into: &lt;code class=&quot;highlighter-rouge&quot;&gt;app/views/test/image.html.erb&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file_field_tag&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file_field_tag&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
 
 
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;#image&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#image'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
 
   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FormData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     
-	&lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;image[image]&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'image[image]'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
 
 	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-	  &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;%= image_upload_path %&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	  &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;%= image_upload_path %&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;processData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;PUT&#39;&lt;/span&gt;
+	  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'PUT'&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
 
@@ -656,19 +680,19 @@ bundle exec rake db:migrate
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;controller&quot;&gt;6. Controller&lt;/h2&gt;
+&lt;h2 id=&quot;6-controller&quot;&gt;6. Controller&lt;/h2&gt;
 
 &lt;p&gt;in file: &lt;code class=&quot;highlighter-rouge&quot;&gt;app/controller/api_controller.rb&lt;/code&gt;&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
 	
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;image_upload&lt;/span&gt;
     &lt;span class=&quot;vi&quot;&gt;@image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;create&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@image&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;success&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:image_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'success'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:image_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;vi&quot;&gt;@image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;fail&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fail'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -685,36 +709,36 @@ bundle exec rake db:migrate
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h2 id=&quot;experiment-time&quot;&gt;7. Experiment Time!&lt;/h2&gt;
+&lt;h2 id=&quot;7-experiment-time&quot;&gt;7. Experiment Time!&lt;/h2&gt;
 
 &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;ruby
 rails s -b 0.0.0.0 -p 5000      
 &lt;/code&gt;&lt;/p&gt;
 
-&lt;p&gt;s mean server      &lt;br /&gt;
--b mean you can visit this outside vmware  &lt;br /&gt;
+&lt;p&gt;s mean server    &lt;br /&gt;
+-b mean you can visit this outside vmware&lt;br /&gt;
 -p mean port 5000&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;first&quot;&gt;7.1 First&lt;/h3&gt;
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://192.168.1.139:5000/image&lt;/code&gt;  &lt;br /&gt;
-your address is different from mine, don’t forget change it   &lt;br /&gt;
+&lt;h3 id=&quot;71-first&quot;&gt;7.1 First&lt;/h3&gt;
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;http://192.168.1.139:5000/image&lt;/code&gt;&lt;br /&gt;
+your address is different from mine, don’t forget change it &lt;br /&gt;
 &lt;img src=&quot;/images/post1/1.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;lets-choose-a-file&quot;&gt;7.2 Let’s Choose a file&lt;/h3&gt;
+&lt;h3 id=&quot;72-lets-choose-a-file&quot;&gt;7.2 Let’s Choose a file&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post1/2.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;it-work&quot;&gt;7.3 It work!&lt;/h3&gt;
+&lt;h3 id=&quot;73-it-work&quot;&gt;7.3 It work!&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post1/3.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;image-work&quot;&gt;7.4 Image work!&lt;/h3&gt;
+&lt;h3 id=&quot;74-image-work&quot;&gt;7.4 Image work!&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/images/post1/4.png&quot; alt=&quot;page&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;done-over&quot;&gt;Done! over.&lt;/h2&gt;
@@ -724,30 +748,30 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 
 &lt;h3 id=&quot;lets-preview-file&quot;&gt;Let’s preview file&lt;/h3&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file_field_tag&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;preview&#39;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file_field_tag&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'preview'&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
 
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;#image&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#image'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
 
 	&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FormData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     
-	&lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;image[image]&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+	&lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'image[image]'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
 
 	&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-	  &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;%= image_upload_path %&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+	  &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;%= image_upload_path %&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
 	  &lt;span class=&quot;na&quot;&gt;processData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-	  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;PUT&#39;&lt;/span&gt;
+	  &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'PUT'&lt;/span&gt;
 	&lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
 		&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
-		&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;#preview&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+		&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#preview'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
 	&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
@@ -763,7 +787,7 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 
 &lt;p&gt;Model&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ActiveRecord&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;::&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;Base&lt;/span&gt;
 
   &lt;span class=&quot;n&quot;&gt;has_attached_file&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;styles: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;medium: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;160x160&amp;gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;thumb: &lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;60x60&amp;gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;n&quot;&gt;validates_attachment_content_type&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;content_type: &lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/\Aimage\/.*\Z/&lt;/span&gt;
@@ -776,16 +800,16 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 
 &lt;p&gt;Controller&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
   
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;image_upload&lt;/span&gt;
 
     &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;success&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:image_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'success'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:image_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;fail&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;ss&quot;&gt;:info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;full_messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fail'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;ss&quot;&gt;:info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;full_messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -800,7 +824,7 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
 &lt;hr /&gt;
@@ -813,31 +837,31 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 
 &lt;p&gt;view:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
+&lt;div class=&quot;language-javascript highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;
 &lt;span class=&quot;o&quot;&gt;&amp;lt;%=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;file_field_tag&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;:&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;preview&#39;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;img&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;id&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'preview'&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;src&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;#&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;   &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
 
 &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;script&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;text/javascript&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
 
-&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;#image&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#image'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;change&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(){&lt;/span&gt;
 
   &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;FormData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(),&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
     
-  &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;image[image]&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;append&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'image[image]'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;].&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;files&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt;
 
   &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;ajax&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;lt;%= image_upload_path %&amp;gt;&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'&amp;lt;%= image_upload_path %&amp;gt;'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;formData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;cache&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;contentType&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
     &lt;span class=&quot;na&quot;&gt;processData&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-    &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;PUT&#39;&lt;/span&gt;
+    &lt;span class=&quot;na&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'PUT'&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;done&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;  &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
     &lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;    &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;#preview&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;src&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'#preview'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;).&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;attr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'src'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;image_url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
   &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt; &lt;span class=&quot;c&quot;&gt;&amp;lt;!--&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;code&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;here&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;--&amp;gt;&lt;/span&gt;
 
@@ -849,16 +873,16 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 
 &lt;p&gt;controller:&lt;/p&gt;
 
-&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
+&lt;div class=&quot;language-ruby highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;ApiController&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;ApplicationController&lt;/span&gt;
   
   &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;image_upload&lt;/span&gt;
 
     &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;new&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;img_params&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
 
     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;save&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;success&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:image_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'success'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:image_url&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;url&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;fail&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;ss&quot;&gt;:info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;full_messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;render&lt;/span&gt; &lt;span class=&quot;ss&quot;&gt;:json&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;ss&quot;&gt;:status&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'fail'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;   &lt;span class=&quot;ss&quot;&gt;:info&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;image&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;errors&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;full_messages&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
 
   &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
@@ -873,11 +897,11 @@ your address is different from mine, don’t forget change it   &lt;br /&gt;
 &lt;/code&gt;&lt;/pre&gt;
 &lt;/div&gt;
 
-&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-&lt;br /&gt;&lt;br /&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 </description>
-        <pubDate>Sun, 17 Jul 2016 04:33:43 -0700</pubDate>
+        <pubDate>Sun, 17 Jul 2016 19:33:43 +0800</pubDate>
         <link>http://1c7.me/2016/07/17/ajax-image-upload-with-rails-paperclip.html</link>
         <guid isPermaLink="true">http://1c7.me/2016/07/17/ajax-image-upload-with-rails-paperclip.html</guid>
         

@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://1c7.me/2016/07/17/ajax-image-upload-with-rails-paperclip.html">
-  <link rel="alternate" type="application/rss+xml" title="Cheng Zheng's Blog" href="http://1c7.me/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="1c7 blog" href="http://1c7.me/feed.xml">
   <link rel="icon" type="image/png" href="FAVICON.png">
 </head>
 
@@ -22,7 +22,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Cheng Zheng's Blog</a>
+    <a class="site-title" href="/">1c7 blog</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -63,7 +63,7 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">[Ruby on Rails 4 + Paperclip gem]: Ajax image upload</h1>
-    <p class="post-meta"><time datetime="2016-07-17T04:33:43-07:00" itemprop="datePublished">Jul 17, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-07-17T19:33:43+08:00" itemprop="datePublished">Jul 17, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
@@ -71,9 +71,9 @@
 
 <p><br /></p>
 
-<h2 id="why">0. why</h2>
-<p>I was trying to create <strong>Ajax Image Upload API</strong> for My Rails application,  <br />
-So I search on Google,   <br />
+<h2 id="0-why">0. why</h2>
+<p>I was trying to create <strong>Ajax Image Upload API</strong> for My Rails application,<br />
+So I search on Google, <br />
 These article:</p>
 
 <ol>
@@ -82,35 +82,35 @@ These article:</p>
   <li>over complex.</li>
 </ol>
 
-<p>I poke around little bit, and come with a simple solution  <br />
+<p>I poke around little bit, and come with a simple solution<br />
 Here is my solution</p>
 
 <p><br /></p>
 
-<h2 id="preview-final-result">0.5 Preview final result:</h2>
-<p><img src="/images/post1/5.png" alt="page" /><br />
-<img src="/images/post1/6.png" alt="page" /><br />
-<img src="/images/post1/7.png" alt="page" /><br />
-<img src="/images/post1/8.png" alt="page" /><br />
-<img src="/images/post1/9.png" alt="page" /><br />
-<img src="/images/post1/10.png" alt="page" /><br />
+<h2 id="05-preview-final-result">0.5 Preview final result:</h2>
+<p><img src="/images/post1/5.png" alt="page" />
+<img src="/images/post1/6.png" alt="page" />
+<img src="/images/post1/7.png" alt="page" />
+<img src="/images/post1/8.png" alt="page" />
+<img src="/images/post1/9.png" alt="page" />
+<img src="/images/post1/10.png" alt="page" />
 <img src="/images/post1/11.png" alt="page" /></p>
 
-<p><br /><br />
+<p><br />
 <br /></p>
 
 <h2 id="well-lets-do-this-step-by-step">Well, let’s do this step by step</h2>
 
 <p><br /></p>
 
-<h2 id="create-a-rails-project">1. Create a Rails project</h2>
+<h2 id="1-create-a-rails-project">1. Create a Rails project</h2>
 <p><code class="highlighter-rouge">ruby 
 rails new img --skip-bundle
 </code></p>
 
 <p><br /></p>
 
-<h2 id="install-paperclip-gem">2. Install Paperclip gem:</h2>
+<h2 id="2-install-paperclip-gem">2. Install Paperclip gem:</h2>
 <p><a href="https://github.com/thoughtbot/paperclip">following instruction come from offcial guide</a></p>
 
 <p>add following line to gemfile</p>
@@ -119,15 +119,15 @@ rails new img --skip-bundle
 gem "paperclip", "~&gt; 5.0.0" 
 </code></p>
 
-<p>and then   <br />
+<p>and then <br />
 <code class="highlighter-rouge">bundle install</code></p>
 
-<p>or   <br />
+<p>or <br />
 <code class="highlighter-rouge">gem install paperclip</code></p>
 
 <p><br /></p>
 
-<h2 id="create-model-for-image-and-necessary-migration">3. Create model for Image and necessary migration</h2>
+<h2 id="3-create-model-for-image-and-necessary-migration">3. Create model for Image and necessary migration</h2>
 
 <p>run</p>
 
@@ -137,7 +137,7 @@ rails g model Image
 
 <p>copy &amp; paste following code into <code class="highlighter-rouge">app/models/image.rb</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Image</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Image</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
   <span class="n">has_attached_file</span> <span class="ss">:image</span><span class="p">,</span> <span class="ss">styles: </span><span class="p">{</span> <span class="ss">medium: </span><span class="s2">"300x300&gt;"</span><span class="p">,</span> <span class="ss">thumb: </span><span class="s2">"100x100&gt;"</span> <span class="p">}</span>
   <span class="n">validates_attachment_content_type</span> <span class="ss">:image</span><span class="p">,</span> <span class="ss">content_type: </span><span class="sr">/\Aimage\/.*\Z/</span>
 <span class="k">end</span>
@@ -148,7 +148,7 @@ rails g model Image
 
 <p>inside <code class="highlighter-rouge">db/migrate/20160721100726_add_attachment_to_image.rb</code> file</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AddAttachmentToImage</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">AddAttachmentToImage</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Migration</span>
   <span class="k">def</span> <span class="nf">up</span>
     <span class="n">add_attachment</span> <span class="ss">:images</span><span class="p">,</span> <span class="ss">:image</span>
   <span class="k">end</span>
@@ -168,11 +168,11 @@ bundle exec rake db:migrate
 
 <p><br /></p>
 
-<h2 id="routes">4. Routes</h2>
+<h2 id="4-routes">4. Routes</h2>
 
 <p>config/routes.rb</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="no">Rails</span><span class="p">.</span><span class="nf">application</span><span class="p">.</span><span class="nf">routes</span><span class="p">.</span><span class="nf">draw</span> <span class="k">do</span>
 
   <span class="c1"># for view</span>
   <span class="n">get</span> <span class="s1">'/image'</span> <span class="o">=&gt;</span> <span class="s1">'test#image'</span>
@@ -190,11 +190,11 @@ bundle exec rake db:migrate
 
 <p><br /></p>
 
-<h2 id="view">5. View</h2>
+<h2 id="5-view">5. View</h2>
 
 <p>put following content into: <code class="highlighter-rouge">app/views/test/image.html.erb</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;%=</span> <span class="nx">file_field_tag</span> <span class="err">:</span><span class="nx">image</span> <span class="o">%&gt;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;%=</span> <span class="nx">file_field_tag</span> <span class="err">:</span><span class="nx">image</span> <span class="o">%&gt;</span>
 
 
 <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>
@@ -222,11 +222,11 @@ bundle exec rake db:migrate
 
 <p><br /></p>
 
-<h2 id="controller">6. Controller</h2>
+<h2 id="6-controller">6. Controller</h2>
 
 <p>in file: <code class="highlighter-rouge">app/controller/api_controller.rb</code></p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
 	
   <span class="k">def</span> <span class="nf">image_upload</span>
     <span class="vi">@image</span> <span class="o">=</span> <span class="no">Image</span><span class="p">.</span><span class="nf">create</span><span class="p">(</span><span class="n">img_params</span><span class="p">)</span>
@@ -251,36 +251,36 @@ bundle exec rake db:migrate
 
 <p><br /></p>
 
-<h2 id="experiment-time">7. Experiment Time!</h2>
+<h2 id="7-experiment-time">7. Experiment Time!</h2>
 
 <p><code class="highlighter-rouge">ruby
 rails s -b 0.0.0.0 -p 5000      
 </code></p>
 
-<p>s mean server      <br />
--b mean you can visit this outside vmware  <br />
+<p>s mean server    <br />
+-b mean you can visit this outside vmware<br />
 -p mean port 5000</p>
 
 <p><br /></p>
 
-<h3 id="first">7.1 First</h3>
-<p><code class="highlighter-rouge">http://192.168.1.139:5000/image</code>  <br />
-your address is different from mine, don’t forget change it   <br />
+<h3 id="71-first">7.1 First</h3>
+<p><code class="highlighter-rouge">http://192.168.1.139:5000/image</code><br />
+your address is different from mine, don’t forget change it <br />
 <img src="/images/post1/1.png" alt="page" /></p>
 
-<h3 id="lets-choose-a-file">7.2 Let’s Choose a file</h3>
+<h3 id="72-lets-choose-a-file">7.2 Let’s Choose a file</h3>
 
 <p><img src="/images/post1/2.png" alt="page" /></p>
 
-<h3 id="it-work">7.3 It work!</h3>
+<h3 id="73-it-work">7.3 It work!</h3>
 
 <p><img src="/images/post1/3.png" alt="page" /></p>
 
-<h3 id="image-work">7.4 Image work!</h3>
+<h3 id="74-image-work">7.4 Image work!</h3>
 
 <p><img src="/images/post1/4.png" alt="page" /></p>
 
-<p><br /><br />
+<p><br />
 <br /></p>
 
 <h2 id="done-over">Done! over.</h2>
@@ -290,7 +290,7 @@ your address is different from mine, don’t forget change it   <br />
 
 <h3 id="lets-preview-file">Let’s preview file</h3>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;%=</span> <span class="nx">file_field_tag</span> <span class="err">:</span><span class="nx">image</span> <span class="o">%&gt;</span>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;%=</span> <span class="nx">file_field_tag</span> <span class="err">:</span><span class="nx">image</span> <span class="o">%&gt;</span>
 <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">id</span><span class="o">=</span><span class="s1">'preview'</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"#"</span><span class="o">&gt;</span>   <span class="c">&lt;!--</span> <span class="k">new</span> <span class="nx">code</span> <span class="nx">here</span><span class="o">--&gt;</span>
 
 
@@ -329,7 +329,7 @@ your address is different from mine, don’t forget change it   <br />
 
 <p>Model</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Image</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">Image</span> <span class="o">&lt;</span> <span class="no">ActiveRecord</span><span class="o">::</span><span class="no">Base</span>
 
   <span class="n">has_attached_file</span> <span class="ss">:image</span><span class="p">,</span> <span class="ss">styles: </span><span class="p">{</span> <span class="ss">medium: </span><span class="s2">"160x160&gt;"</span><span class="p">,</span> <span class="ss">thumb: </span><span class="s2">"60x60&gt;"</span> <span class="p">}</span>
   <span class="n">validates_attachment_content_type</span> <span class="ss">:image</span><span class="p">,</span> <span class="ss">content_type: </span><span class="sr">/\Aimage\/.*\Z/</span>
@@ -342,7 +342,7 @@ your address is different from mine, don’t forget change it   <br />
 
 <p>Controller</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
   
   <span class="k">def</span> <span class="nf">image_upload</span>
 
@@ -366,7 +366,7 @@ your address is different from mine, don’t forget change it   <br />
 </code></pre>
 </div>
 
-<p><br /><br />
+<p><br />
 <br /></p>
 
 <hr />
@@ -379,7 +379,7 @@ your address is different from mine, don’t forget change it   <br />
 
 <p>view:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code>
+<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>
 <span class="o">&lt;%=</span> <span class="nx">file_field_tag</span> <span class="err">:</span><span class="nx">image</span> <span class="o">%&gt;</span>
 <span class="o">&lt;</span><span class="nx">img</span> <span class="nx">id</span><span class="o">=</span><span class="s1">'preview'</span> <span class="nx">src</span><span class="o">=</span><span class="s2">"#"</span><span class="o">&gt;</span>   <span class="c">&lt;!--</span> <span class="k">new</span> <span class="nx">code</span> <span class="nx">here</span><span class="o">--&gt;</span>
 
@@ -415,7 +415,7 @@ your address is different from mine, don’t forget change it   <br />
 
 <p>controller:</p>
 
-<div class="highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
+<div class="language-ruby highlighter-rouge"><pre class="highlight"><code><span class="k">class</span> <span class="nc">ApiController</span> <span class="o">&lt;</span> <span class="no">ApplicationController</span>
   
   <span class="k">def</span> <span class="nf">image_upload</span>
 
@@ -439,8 +439,8 @@ your address is different from mine, don’t forget change it   <br />
 </code></pre>
 </div>
 
-<p><br /><br />
-<br /><br />
+<p><br />
+<br />
 <br /></p>
 
   </div>
@@ -474,7 +474,7 @@ var disqus_config = function () {
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Cheng Zheng's Blog</h2>
+    <h2 class="footer-heading">1c7 blog</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -504,7 +504,7 @@ var disqus_config = function () {
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
+        <p>Hi, I'm Cheng Zheng, Web developer(mostly Ruby on Rails）
 </p>
       </div>
     </div>

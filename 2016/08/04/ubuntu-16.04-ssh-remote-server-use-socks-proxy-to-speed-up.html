@@ -11,7 +11,7 @@
 
   <link rel="stylesheet" href="/css/main.css">
   <link rel="canonical" href="http://1c7.me/2016/08/04/ubuntu-16.04-ssh-remote-server-use-socks-proxy-to-speed-up.html">
-  <link rel="alternate" type="application/rss+xml" title="Cheng Zheng's Blog" href="http://1c7.me/feed.xml">
+  <link rel="alternate" type="application/rss+xml" title="1c7 blog" href="http://1c7.me/feed.xml">
   <link rel="icon" type="image/png" href="FAVICON.png">
 </head>
 
@@ -22,7 +22,7 @@
 
   <div class="wrapper">
 
-    <a class="site-title" href="/">Cheng Zheng's Blog</a>
+    <a class="site-title" href="/">1c7 blog</a>
 
     <nav class="site-nav">
       <a href="#" class="menu-icon">
@@ -63,20 +63,20 @@
 
   <header class="post-header">
     <h1 class="post-title" itemprop="name headline">ssh 使用 shadowsocks 加速</h1>
-    <p class="post-meta"><time datetime="2016-08-04T01:41:01-07:00" itemprop="datePublished">Aug 4, 2016</time></p>
+    <p class="post-meta"><time datetime="2016-08-04T16:41:01+08:00" itemprop="datePublished">Aug 4, 2016</time></p>
   </header>
 
   <div class="post-content" itemprop="articleBody">
-    <h3 id="section">问题</h3>
+    <h3 id="问题">问题</h3>
 
 <p>国内 ssh 国外的 vps 服务器,　要么死慢死慢(300ms+),　要么完全连不上.</p>
 
 <p><br /></p>
 
-<h3 id="ubuntu-1604">解决方法 (环境: Ubuntu 16.04):</h3>
+<h3 id="解决方法-环境-ubuntu-1604">解决方法 (环境: Ubuntu 16.04):</h3>
 
-<p>首先本地的 shadowssock 要跑起来  <br />
-我用的是 shadowssock-qt 就是那个绿色圆圈图标的  <br />
+<p>首先本地的 shadowssock 要跑起来<br />
+我用的是 shadowssock-qt 就是那个绿色圆圈图标的<br />
 安装 shadowssock-qt:</p>
 
 <div class="highlighter-rouge"><pre class="highlight"><code>sudo add-apt-repository ppa:hzwhuang/ss-qt5
@@ -110,13 +110,13 @@ sudo apt-get install shadowsocks-qt5
 <div class="highlighter-rouge"><pre class="highlight"><code>ProxyCommand nc -x localhost:1080 %h %p  
 </code></pre>
 </div>
-<p>按 ESC 回到命令模式  <br />
+<p>按 ESC 回到命令模式<br />
 然后 <code class="highlighter-rouge">:wq</code>　保存</p>
 
-<p><br /><br />
+<p><br />
 <br /></p>
 
-<p>现在就快多了  <br />
+<p>现在就快多了<br />
 不需要的时候在前面加上 # 号注释掉, 需要的时候再打开</p>
 
 
@@ -151,7 +151,7 @@ var disqus_config = function () {
 
   <div class="wrapper">
 
-    <h2 class="footer-heading">Cheng Zheng's Blog</h2>
+    <h2 class="footer-heading">1c7 blog</h2>
 
     <div class="footer-col-wrapper">
       <div class="footer-col footer-col-1">
@@ -181,7 +181,7 @@ var disqus_config = function () {
       </div>
 
       <div class="footer-col footer-col-3">
-        <p>Hi, My name is Cheng Zheng, I am a Ruby on Rails developer
+        <p>Hi, I'm Cheng Zheng, Web developer(mostly Ruby on Rails）
 </p>
       </div>
     </div>
