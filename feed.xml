@@ -6,12 +6,81 @@
 </description>
     <link>http://1c7.me/</link>
     <atom:link href="http://1c7.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 09 Jul 2017 22:01:39 +0800</pubDate>
-    <lastBuildDate>Sun, 09 Jul 2017 22:01:39 +0800</lastBuildDate>
+    <pubDate>Sat, 15 Jul 2017 22:27:40 +0800</pubDate>
+    <lastBuildDate>Sat, 15 Jul 2017 22:27:40 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
-        <title>寓住 - 根据城市筛选公寓（我的个人项目）</title>
+        <title>Yuzhu - Find Apartment in China（My 4th side project) - Launched at July 11, 2017</title>
+        <description>&lt;p&gt;This post is written 4 day after launched.&lt;/p&gt;
+
+&lt;h1 id=&quot;first-link-here&quot;&gt;First, link here:&lt;/h1&gt;
+&lt;h4 id=&quot;httpyuzhume&quot;&gt;&lt;a href=&quot;http://yuzhu.me&quot; target=&quot;_blank&quot;&gt;http://yuzhu.me&lt;/a&gt;&lt;/h4&gt;
+&lt;p&gt;(Free and no monetize plan yet) &lt;br /&gt;
+&lt;img src=&quot;/images/yuzhu/yuzhu-landing-top.jpg&quot; alt=&quot;yuzhu landing page, top section&quot; /&gt;
+I just build it to solve my own problem first, and release it see what happen)
+it look like this:&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;what-problem-it-solve--super-short-explain&quot;&gt;What problem it solve?  (super short explain)&lt;/h3&gt;
+&lt;p&gt;Find “Serviced Apartment” in China. filter apartment base on city.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;a-bit-of-intro&quot;&gt;A bit of Intro&lt;/h3&gt;
+&lt;p&gt;Even though the website (yuzhu.me) is in Chinese and this post is in English, if you are reading this you probably don’t know Chinese and you guys may not even be my “target user”(air quote).&lt;/p&gt;
+
+&lt;p&gt;but doesn’t matter.  &lt;br /&gt;
+I just wanna discuss this with you guys and know what you think… any feedback / advice is welcome, Thank you!&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;why-build-this-there-are-no-exist-solution&quot;&gt;Why build this? there are no exist solution?&lt;/h3&gt;
+&lt;p&gt;nope.&lt;br /&gt;
+Assume you want rent a place to live in China. (not just couple day, more then a month)&lt;/p&gt;
+
+&lt;p&gt;There are 2 type of place you can choose    &lt;br /&gt;
+(Ignore Airbnb &amp;amp; Hotel here, they are for tourist &amp;amp; short-term, not for long-term, unless you are rich)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;First type&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;just normal people rent out their own house. we all familiar with this. &lt;br /&gt;
+in US, people probably use CraigList for this. I am not sure, I am Chinese, never been to U.S before.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Second type&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;“Serviced Apartment”. Company rent entire building for maybe 5 to 10 years.&lt;br /&gt;
+they decorate all these rooms, make it look &amp;amp; feel like hotel (or just generally beautiful), &lt;br /&gt;
+you don’t have to buy any furniture. &lt;br /&gt;
+they provide service like regular clean up, maybe some public working space, or sharing kitchen.&lt;br /&gt;
+these company have their brand name, like “You+”  (Their website: &lt;a href=&quot;https://www.youplus.cc/&quot; target=&quot;_blank&quot;&gt;https://www.youplus.cc/&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Question: How to find out how many brands there is in a particular city?&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;if you are trying to rent an Serviced Apartment in GuangZhou(City name)&lt;br /&gt;
+You probably doesn’t care their brand, you just want a list.&lt;br /&gt;
+a list of all these brands in GuangZhou. &lt;br /&gt;
+How do you do it?&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;After some research, I found out there are no existing tool can solve this problem. (which is strange)&lt;br /&gt;
+so I just build this myself.
+&lt;img src=&quot;/images/yuzhu/yuzhu-feature.png&quot; alt=&quot;yuzhu landing page, the part that have actual useful function&quot; /&gt;
+it’s free, just click city name, and it would return a list of brands in that city.&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;
+Thank you for reading.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 15 Jul 2017 22:15:00 +0800</pubDate>
+        <link>http://1c7.me/2017/07/15/yuzhu-English.html</link>
+        <guid isPermaLink="true">http://1c7.me/2017/07/15/yuzhu-English.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>寓住 - 根据城市筛选公寓（我的第 4 个项目）</title>
         <description>&lt;h4 id=&quot;httpyuzhume&quot;&gt;&lt;a href=&quot;http://yuzhu.me&quot; target=&quot;_blank&quot;&gt;http://yuzhu.me&lt;/a&gt;&lt;/h4&gt;
 
 &lt;h3 id=&quot;我碰到的问题-或者说换句话说我为什么写这个&quot;&gt;我碰到的问题 (或者说换句话说”我为什么写这个”)&lt;/h3&gt;
