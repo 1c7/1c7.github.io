@@ -6,8 +6,8 @@
 </description>
     <link>http://1c7.me/</link>
     <atom:link href="http://1c7.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Jul 2017 22:27:40 +0800</pubDate>
-    <lastBuildDate>Sat, 15 Jul 2017 22:27:40 +0800</lastBuildDate>
+    <pubDate>Sat, 15 Jul 2017 22:36:35 +0800</pubDate>
+    <lastBuildDate>Sat, 15 Jul 2017 22:36:35 +0800</lastBuildDate>
     <generator>Jekyll v3.5.0</generator>
     
       <item>
@@ -69,8 +69,18 @@ so I just build this myself.
 &lt;img src=&quot;/images/yuzhu/yuzhu-feature.png&quot; alt=&quot;yuzhu landing page, the part that have actual useful function&quot; /&gt;
 it’s free, just click city name, and it would return a list of brands in that city.&lt;/p&gt;
 
-&lt;p&gt;&lt;br /&gt;
-Thank you for reading.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;h2 id=&quot;thanks-for-reading&quot;&gt;Thanks for reading.&lt;/h2&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h4 id=&quot;some-extre-info&quot;&gt;some extre info&lt;/h4&gt;
+&lt;p&gt;Ruby on Rails + jQuery + Bootstrap.&lt;br /&gt;
+Not using AWS, using UCloud (you can think of it as Chinese version AWS). &lt;br /&gt;
+Traffic data(Launch at July 11, Data is log here at July 15): &lt;br /&gt;
+180 -&amp;gt; 500 -&amp;gt; 500 -&amp;gt; 240  &lt;br /&gt;
+180(July 11)  -&amp;gt; 500(July 12) -&amp;gt; 500(July 13) 240(July 14)&lt;/p&gt;
+
+&lt;p&gt;Using: Mixpanel, Rollbar, HotJar, Drift.(All free)&lt;/p&gt;
 </description>
         <pubDate>Sat, 15 Jul 2017 22:15:00 +0800</pubDate>
         <link>http://1c7.me/2017/07/15/yuzhu-English.html</link>
